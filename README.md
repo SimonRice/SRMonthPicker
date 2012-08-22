@@ -2,14 +2,14 @@
 
 Like UIDatePicker, but without the days.
 
-This is a native, localised monthpicker for iOS, licenced under the terms of the [MIT License](http://http://opensource.org/licenses/mit-license.php).  It's meant to mimic the look, feel & behaviour for one of 2 UI elements on iOS:
+This is a native, localised month picker for iOS, licenced under the terms of the [MIT License](http://http://opensource.org/licenses/mit-license.php).  It's meant to mimic the look, feel & behaviour of 2 UI elements on iOS:
 
 * A monthpicker that appears for an `<input type="month" />` element on iOS Safari
 * A UIDatePicker set to Date-only mode, but without the day element.
 
 ## Including in your project
 
-The easiest way by far of including this project is to use [CocoaPods](http://www.cocoapods.org).  Once you've got that up & running for your project, simimply add the dependency to your `Podfile`:
+The easiest way by far of including this project is to use [CocoaPods](http://cocoapods.org).  Once you've got that up & running for your project, simimply add the dependency to your `Podfile`:
 
 ```ruby
 platform :ios
