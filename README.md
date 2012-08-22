@@ -28,11 +28,6 @@ Simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Edit
 
 You have properties to show the year first, along with the setting (& getting) the selected date, plus the maximum & minimum years.
 
-## Known Issues
-
-* When the calendar style is set to 'Buddhist', the years display correctly, but lack "BE" at the end.
-* Similarly, with the 'Japanese' calendar style, only the current era is shown.
-
 ## Contributions
 
 As everyone says, GitHub is about social coding - I didn't just choose to use it because of my love of git as a version control system.  Please do chip in & help make this an even better project.
