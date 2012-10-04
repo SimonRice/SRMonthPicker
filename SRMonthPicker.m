@@ -43,6 +43,23 @@
 @synthesize date = _date;
 @synthesize monthStrings = _monthStrings;
 
+-(id)initWithDate:(NSDate *)date
+{
+    self = [super init];
+    if (self != nil){
+        self.dataSource = self;
+        self.delegate = self;
+        [self setDate:date];
+    }
+    return self;
+}
+
+-(id)init
+{
+    self = [self initWithDate:[NSDate date]];
+    return self;
+}
+
 -(void)awakeFromNib
 {
     [super awakeFromNib];
