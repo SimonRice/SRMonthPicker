@@ -165,7 +165,9 @@
     NSDateComponents* components = [[NSDateComponents alloc] init];
     components.month = 1 + ([self selectedRowInComponent:self.monthComponent] % self.monthStrings.count);
     components.year = [self yearFromRow:[self selectedRowInComponent:self.yearComponent]];
+    [self willChangeValueForKey:@"date"];
     _date = [[NSCalendar currentCalendar] dateFromComponents:components];
+    [self didChangeValueForKey:@"date"];
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
