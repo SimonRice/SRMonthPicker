@@ -13,7 +13,6 @@ The easiest way by far of including this project is to use [CocoaPods](http://co
 
 ```ruby
 platform :ios
-...
 pod 'SRMonthPicker'
 ...
 ```
@@ -24,7 +23,9 @@ Alternatively, simply clone this project as a submodule or download the classes,
 
 ## Usage
 
-Simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Editor, set the class of the picker to `SRMonthPicker`.
+For Interface Builder (including Storyboard), simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Editor, set the class of the picker to `SRMonthPicker`.
+
+If you're building your interfaces by code, it's simply a case of initialising & adding a subview.
 
 You have properties to show the year first, along with the setting (& getting) the selected date, plus the maximum & minimum years.
 

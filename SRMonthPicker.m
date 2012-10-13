@@ -46,11 +46,13 @@
 -(id)initWithDate:(NSDate *)date
 {
     self = [super init];
-    if (self != nil){
-        self.dataSource = self;
-        self.delegate = self;
+    
+    if (self)
+    {
+        [self prepare];
         [self setDate:date];
     }
+    
     return self;
 }
 
@@ -60,15 +62,24 @@
     return self;
 }
 
--(void)awakeFromNib
+-(id)initWithCoder:(NSCoder *)aDecoder
 {
-    [super awakeFromNib];
+    self = [super initWithCoder:aDecoder];
     
+    if (self)
+    {
+        [self prepare];
+        if (!_date)
+            [self setDate:[NSDate date]];
+    }
+    
+    return self;
+}
+
+-(void)prepare
+{
     self.dataSource = self;
     self.delegate = self;
-    
-    if (!_date)
-        [self setDate:[NSDate date]];
 }
 
 -(int)monthComponent
@@ -218,10 +229,10 @@
     if (component == self.monthComponent) {
         label.text = [self.monthStrings objectAtIndex:(row % self.monthStrings.count)];
         formatter.dateFormat = @"MMMM";
-        label.textAlignment = component ? UITextAlignmentLeft : UITextAlignmentRight;
+        label.textAlignment = component ? NSTextAlignmentLeft : NSTextAlignmentRight;
     } else {
         label.text = [NSString stringWithFormat:@"%d", [self yearFromRow:row]];
-        label.textAlignment = UITextAlignmentCenter;
+        label.textAlignment = NSTextAlignmentCenter;
         formatter.dateFormat = @"y";
     }
     

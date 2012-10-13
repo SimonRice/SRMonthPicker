@@ -29,4 +29,6 @@
 @property (nonatomic, strong) NSNumber* maximumYear;
 @property (nonatomic) BOOL yearFirst;
 
+-(id)initWithDate:(NSDate *)date;
+
 @end

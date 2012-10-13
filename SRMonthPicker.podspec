@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SRMonthPicker"
-  s.version      = "0.1.1"
+  s.version      = "0.2.0"
   s.summary      = "Like UIDatePicker, but without the days."
   s.homepage     = "https://www.github.com/simonrice/SRMonthPicker"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
