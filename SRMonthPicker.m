@@ -51,6 +51,7 @@
     {
         [self prepare];
         [self setDate:date];
+        self.showsSelectionIndicator = YES;
     }
     
     return self;
