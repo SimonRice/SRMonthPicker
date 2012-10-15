@@ -77,10 +77,46 @@
     return self;
 }
 
+-(id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    if (self)
+    {
+        [self prepare];
+        if (!_date)
+            [self setDate:[NSDate date]];
+    }
+    
+    return self;
+}
+
 -(void)prepare
 {
     self.dataSource = self;
     self.delegate = self;
+}
+
+-(id<UIPickerViewDelegate>)delegate
+{
+    return self;
+}
+
+-(void)setDelegate:(id<UIPickerViewDelegate>)delegate
+{
+    if ([delegate isEqual:self])
+        [super setDelegate:delegate];
+}
+
+-(id<UIPickerViewDataSource>)dataSource
+{
+    return self;
+}
+
+-(void)setDataSource:(id<UIPickerViewDataSource>)dataSource
+{
+    if ([dataSource isEqual:self])
+        [super setDataSource:dataSource];
 }
 
 -(int)monthComponent
