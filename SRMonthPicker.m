@@ -43,6 +43,7 @@
 @synthesize date = _date;
 @synthesize monthStrings = _monthStrings;
 @synthesize enableColourRow = _enableColourRow;
+@synthesize monthPickerDelegate = _monthPickerDelegate;
 
 -(id)initWithDate:(NSDate *)date
 {
@@ -216,8 +217,15 @@
     NSDateComponents* components = [[NSDateComponents alloc] init];
     components.month = 1 + ([self selectedRowInComponent:self.monthComponent] % self.monthStrings.count);
     components.year = [self yearFromRow:[self selectedRowInComponent:self.yearComponent]];
+    
     [self willChangeValueForKey:@"date"];
+    if ([self.monthPickerDelegate respondsToSelector:@selector(monthPickerWillChangeDate:)])
+        [self.monthPickerDelegate monthPickerWillChangeDate:self];
+    
     _date = [[NSCalendar currentCalendar] dateFromComponents:components];
+    
+    if ([self.monthPickerDelegate respondsToSelector:@selector(monthPickerDidChangeDate:)])
+        [self.monthPickerDelegate monthPickerDidChangeDate:self];
     [self didChangeValueForKey:@"date"];
 }
 

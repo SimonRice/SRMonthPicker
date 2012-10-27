@@ -22,8 +22,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class SRMonthPicker;
+
+@protocol SRMonthPickerDelegate <NSObject>
+
+@optional
+
+- (void)monthPickerWillChangeDate:(SRMonthPicker *)monthPicker;
+- (void)monthPickerDidChangeDate:(SRMonthPicker *)monthPicker;
+
+@end
+
 @interface SRMonthPicker : UIPickerView<UIPickerViewDataSource, UIPickerViewDelegate>
 
+@property (nonatomic, strong) id<SRMonthPickerDelegate> monthPickerDelegate; // "delegate" is already taken
 @property (nonatomic, strong) NSDate* date; // Day component is ignored / set to 1
 @property (nonatomic, strong) NSNumber* minimumYear;
 @property (nonatomic, strong) NSNumber* maximumYear;
