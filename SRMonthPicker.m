@@ -42,6 +42,7 @@
 
 @synthesize date = _date;
 @synthesize monthStrings = _monthStrings;
+@synthesize enableColourRow = _enableColourRow;
 
 -(id)initWithDate:(NSDate *)date
 {
@@ -95,6 +96,8 @@
 {
     self.dataSource = self;
     self.delegate = self;
+    
+    _enableColourRow = YES;
 }
 
 -(id<UIPickerViewDelegate>)delegate
@@ -273,7 +276,7 @@
         formatter.dateFormat = @"y";
     }
     
-    if ([[formatter stringFromDate:[NSDate date]] isEqualToString:label.text])
+    if (_enableColourRow && [[formatter stringFromDate:[NSDate date]] isEqualToString:label.text])
         label.textColor = [UIColor colorWithRed:0.0f green:0.35f blue:0.91f alpha:1.0f];
     
     label.font = [UIFont boldSystemFontOfSize:24.0f];

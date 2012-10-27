@@ -28,6 +28,7 @@
 @property (nonatomic, strong) NSNumber* minimumYear;
 @property (nonatomic, strong) NSNumber* maximumYear;
 @property (nonatomic) BOOL yearFirst;
+@property (nonatomic) BOOL enableColourRow;
 
 -(id)initWithDate:(NSDate *)date;
 
