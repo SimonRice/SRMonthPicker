@@ -2,7 +2,7 @@
 
 Like UIDatePicker, but without the days.
 
-This is a native, localised month picker for iOS, licenced under the terms of the [MIT License](http://http://opensource.org/licenses/mit-license.php).  It's meant to mimic the look, feel & behaviour of 2 UI elements on iOS:
+This is a native, localised month picker for iOS, licenced under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).  It's meant to mimic the look, feel & behaviour of 2 UI elements on iOS:
 
 * A monthpicker that appears for an `<input type="month" />` element on iOS Safari
 * A UIDatePicker set to Date-only mode, but without the day element.
@@ -28,6 +28,13 @@ For Interface Builder (including Storyboard), simply drag out a `UIPickerView` i
 If you're building your interfaces by code, it's simply a case of initialising & adding a subview.
 
 You have properties to show the year first, along with the setting (& getting) the selected date, plus the maximum & minimum years.
+
+As of version 0.2.5, there is a `SRMonthPickerDelegate`.  This provides 2 optional methods:
+
+* `- (void)monthPickerWillChangeDate:(SRMonthPicker *)monthPicker`
+* `- (void)monthPickerDidChangeDate:(SRMonthPicker *)monthPicker`
+
+Because the `delegate` property is used for something else, you'll need to assign your delegate to the month picker's `monthPickerDelegate` property.
 
 ## Contributions
 
