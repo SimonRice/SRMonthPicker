@@ -35,4 +35,4 @@ As everyone says, GitHub is about social coding - I didn't just choose to use it
 
 ## License
 
-As stated further up on this page, usage is provided under the [MIT License](http://http://opensource.org/licenses/mit-license.php).  See the `LICENSE` file or any class header for the full details.
+As stated further up on this page, usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php).  See the `LICENSE` file or any class header for the full details.
