@@ -24,24 +24,69 @@
 
 @class SRMonthPicker;
 
+/**
+  Defines a set of optional methods you can use to receive change-related messages 
+  for SRMonthPicker objects.  All of the methods in this protocol are optional.  
+  Typically the delegate implements other optional methods to respond to new
+  selections. 
+ */
 @protocol SRMonthPickerDelegate <NSObject>
 
 @optional
 
+/**
+  Tells the delegate that a specified date is about to be selected.
+  @param A month picker object informing the delegate about the impending selection.
+*/
 - (void)monthPickerWillChangeDate:(SRMonthPicker *)monthPicker;
+/**
+  Tells the delegate that a specified date has been selected.
+  @param A month picker object informing the delegate about the committed selection.
+*/
 - (void)monthPickerDidChangeDate:(SRMonthPicker *)monthPicker;
 
 @end
 
 @interface SRMonthPicker : UIPickerView<UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (nonatomic, weak) id<SRMonthPickerDelegate> monthPickerDelegate; // "delegate" is already taken
-@property (nonatomic, strong) NSDate* date; // Day component is ignored / set to 1
+/**
+  The designated delegate for the month picker.
+  @remark The "delegate" property is already used internally for UIPickerView's delegate - 
+  please don't use it!
+  */
+@property (nonatomic, weak) id<SRMonthPickerDelegate> monthPickerDelegate;
+/**
+  The date represented by the month picker - the day component is ignored when written,
+  and set to 1 when read.
+  */
+@property (nonatomic, strong) NSDate* date;
+  
+/**
+  The minimum year that a month picker can show.
+  */
 @property (nonatomic, strong) NSNumber* minimumYear;
+/**
+  The maximum year that a month picker can show.
+  */
 @property (nonatomic, strong) NSNumber* maximumYear;
+/**
+  A Boolean value that determines whether the year is shown first.
+  */
+
 @property (nonatomic) BOOL yearFirst;
+/**
+  A Boolean value that determines whether the current month & year are coloured.
+  */
 @property (nonatomic) BOOL enableColourRow;
 
+/**
+  Initializes and returns a newly allocated month picker with the current month & year.
+*/
+-(id)init;
+/**
+  Initializes and returns a newly allocated month picker with the specified date.
+  @param The date to be represented by the month picker -  the day component will be ignored.
+*/
 -(id)initWithDate:(NSDate *)date;
 
 @end
