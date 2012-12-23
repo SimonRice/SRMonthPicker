@@ -14,9 +14,10 @@ This is a native, localised month picker for iOS, licenced under the terms of th
 The easiest way by far of including this project is to use [CocoaPods](http://cocoapods.org).  Once you've got that up & running for your project, simimply add the dependency to your `Podfile`:
 
 ```ruby
-platform :ios
-pod 'SRMonthPicker'
-...
+platform :ios, "5.0"
+
+pod "SRMonthPicker"
+
 ```
 
 Then run `pod install` to install the dependencies.
