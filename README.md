@@ -25,9 +25,7 @@ Alternatively, simply clone this project as a submodule or download the classes,
 
 ## Usage
 
-For Interface Builder (including Storyboard), simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Editor, set the class of the picker to `SRMonthPicker`.
-
-If you're building your interfaces by code, it's simply a case of initialising & adding a subview.
+For Interface Builder (including Storyboard), simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Editor, set the class of the picker to `SRMonthPicker`.  If you're building your interfaces by code, it's simply a case of initialising an SRMonthPicker instance & adding a subview.
 
 You have properties to show the year first, along with the setting (& getting) the selected date, plus the maximum & minimum years.
 
@@ -37,6 +35,8 @@ As of version 0.2.5, there is a `SRMonthPickerDelegate`.  This provides 2 option
 * `- (void)monthPickerDidChangeDate:(SRMonthPicker *)monthPicker`
 
 Because the `delegate` property is used for something else, you'll need to assign your delegate to the month picker's `monthPickerDelegate` property.
+
+A simple example project showing off many of the features can be seen [here](https://www.github.com/simonrice/SRMonthPickerExample).
 
 ## Contributions
 
