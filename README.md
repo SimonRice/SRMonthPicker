@@ -2,6 +2,8 @@
 
 Like UIDatePicker, but without the days.
 
+![Screenshot](/simonrice/SRMonthPicker/raw/master/Doc/screenshot.png)
+
 This is a native, localised month picker for iOS, licenced under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).  It's meant to mimic the look, feel & behaviour of 2 UI elements on iOS:
 
 * A monthpicker that appears for an `<input type="month" />` element on iOS Safari
