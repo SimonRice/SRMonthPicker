@@ -1,0 +1,5 @@
+---
+  language: objective-c
+
+  before_script: Example+Tests/Pretest.sh
+  script: Example+Tests/Test.sh

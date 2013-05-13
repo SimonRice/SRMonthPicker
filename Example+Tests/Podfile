@@ -1,0 +1,7 @@
+platform :ios, "5.0"
+
+pod "SRMonthPicker", :local => "../."
+
+target :SRMonthPickerTests, :exclusive => true do
+   pod "Kiwi"
+end
