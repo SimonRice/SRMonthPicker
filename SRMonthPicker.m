@@ -198,7 +198,7 @@
 -(void)setDate:(NSDate *)date
 {
     NSDateComponents* components = [[NSCalendar currentCalendar] components:DATE_COMPONENT_FLAGS fromDate:date];
-    components.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    components.timeZone = [NSTimeZone systemTimeZone];
     
     if (self.minimumYear && components.year < self.minimumYear.integerValue)
         components.year = self.minimumYear.integerValue;
