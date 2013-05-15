@@ -209,7 +209,7 @@
     [self selectRow:(components.month - 1 + monthMidpoint) inComponent:self.monthComponent animated:NO];
     [self selectRow:[self rowFromYear:components.year] inComponent:self.yearComponent animated:NO];
     
-    _date = date;
+    _date = [[NSCalendar currentCalendar] dateFromComponents:components];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
