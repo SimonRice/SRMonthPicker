@@ -43,7 +43,7 @@ A simple example project showing off many of the features can be seen in the `Ex
 
 ## Contributions
 
-As everyone says, GitHub is about social coding - I didn't just choose to use it because of my love of git as a version control system.  Please do chip in & help make this an even better project.
+As everyone says, GitHub is about social coding - I didn't just choose to use it because of my love of git as a version control system.  Please do chip in & help make this an even better project, or even file in an issue if you see anything not working right.
 
 ## License
 
