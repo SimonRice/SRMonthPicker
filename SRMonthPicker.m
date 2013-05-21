@@ -151,7 +151,7 @@
 {
     NSDate* currentDate = self.date;
     NSDateComponents* components = [[NSCalendar currentCalendar] components:DATE_COMPONENT_FLAGS fromDate:currentDate];
-    components.timeZone = [NSTimeZone systemTimeZone];
+    components.timeZone = [NSTimeZone defaultTimeZone];
     
     if (minimumYear && components.year < minimumYear.integerValue)
         components.year = minimumYear.integerValue;
@@ -165,7 +165,7 @@
 {
     NSDate* currentDate = self.date;
     NSDateComponents* components = [[NSCalendar currentCalendar] components:DATE_COMPONENT_FLAGS fromDate:currentDate];
-    components.timeZone = [NSTimeZone systemTimeZone];
+    components.timeZone = [NSTimeZone defaultTimeZone];
     
     if (maximumYear && components.year > maximumYear.integerValue)
         components.year = maximumYear.integerValue;
@@ -198,7 +198,7 @@
 -(void)setDate:(NSDate *)date
 {
     NSDateComponents* components = [[NSCalendar currentCalendar] components:DATE_COMPONENT_FLAGS fromDate:date];
-    components.timeZone = [NSTimeZone systemTimeZone];
+    components.timeZone = [NSTimeZone defaultTimeZone];
     
     if (self.minimumYear && components.year < self.minimumYear.integerValue)
         components.year = self.minimumYear.integerValue;
