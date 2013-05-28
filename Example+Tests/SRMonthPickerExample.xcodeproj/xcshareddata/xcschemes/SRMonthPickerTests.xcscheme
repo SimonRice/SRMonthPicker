@@ -3,8 +3,8 @@
    LastUpgradeVersion = "0460"
    version = "1.3">
    <BuildAction
-      parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      parallelizeBuildables = "NO"
+      buildImplicitDependencies = "NO">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F864A68524ED4000A8CCBFF7"
+               BlueprintIdentifier = "BCB490FDE1E64DB7BE476D6A"
                BuildableName = "libPods.a"
                BlueprintName = "Pods"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4BE921085AF045A1A1C5DD0E"
+               BlueprintIdentifier = "E1F48CAB9624466DA7A91FF9"
                BuildableName = "libPods-SRMonthPickerTests.a"
                BlueprintName = "Pods-SRMonthPickerTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

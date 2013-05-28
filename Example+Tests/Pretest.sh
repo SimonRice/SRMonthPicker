@@ -3,9 +3,7 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cd /usr/local
-git fetch origin
-git reset --hard origin/master
+gem update
 
 brew update
 brew install xctool

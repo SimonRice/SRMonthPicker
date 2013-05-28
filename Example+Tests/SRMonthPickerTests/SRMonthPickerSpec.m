@@ -38,7 +38,7 @@ describe(@"SRMonthPicker", ^{
         [[theValue(monthPickerComponents.hour) should] equal:theValue(0)];
         [[theValue(monthPickerComponents.minute) should] equal:theValue(0)];
         [[theValue(monthPickerComponents.second) should] equal:theValue(0)];
-        [[monthPickerComponents.timeZone should] equal:[NSTimeZone systemTimeZone]];
+        [[monthPickerComponents.timeZone should] equal:[NSTimeZone defaultTimeZone]];
         
         [[theValue(monthPickerComponents.month) should] equal:theValue(todayComponents.month)];
         [[theValue(monthPickerComponents.year) should] equal:theValue(todayComponents.year)];
@@ -55,7 +55,7 @@ describe(@"SRMonthPicker", ^{
         [[theValue(monthPickerComponents.hour) should] equal:theValue(0)];
         [[theValue(monthPickerComponents.minute) should] equal:theValue(0)];
         [[theValue(monthPickerComponents.second) should] equal:theValue(0)];
-        [[monthPickerComponents.timeZone should] equal:[NSTimeZone systemTimeZone]];
+        [[monthPickerComponents.timeZone should] equal:[NSTimeZone defaultTimeZone]];
         
         [[theValue(monthPickerComponents.month) should] equal:theValue(dateComponents.month)];
         [[theValue(monthPickerComponents.year) should] equal:theValue(dateComponents.year)];
@@ -75,7 +75,7 @@ describe(@"SRMonthPicker", ^{
         [[theValue(monthPickerComponents.hour) should] equal:theValue(0)];
         [[theValue(monthPickerComponents.minute) should] equal:theValue(0)];
         [[theValue(monthPickerComponents.second) should] equal:theValue(0)];
-        [[monthPickerComponents.timeZone should] equal:[NSTimeZone systemTimeZone]];
+        [[monthPickerComponents.timeZone should] equal:[NSTimeZone defaultTimeZone]];
         
         [[theValue(monthPickerComponents.month) should] equal:theValue(dateComponents.month)];
         [[theValue(monthPickerComponents.year) should] equal:theValue(dateComponents.year)];
@@ -99,7 +99,7 @@ describe(@"SRMonthPicker", ^{
         [[theValue(monthPickerComponents.year) shouldNot] equal:theValue(dateComponents.year)];
         [[theValue(monthPickerComponents.month) should] equal:theValue(dateComponents.month)];
         [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.maximumYear.intValue)];
-        [[monthPickerComponents.timeZone should] equal:[NSTimeZone systemTimeZone]];
+        [[monthPickerComponents.timeZone should] equal:[NSTimeZone defaultTimeZone]];
         
         // Set new maximum year, refresh the date components
         monthPicker.maximumYear = @2011;
@@ -126,7 +126,7 @@ describe(@"SRMonthPicker", ^{
         [[theValue(monthPickerComponents.year) shouldNot] equal:theValue(dateComponents.year)];
         [[theValue(monthPickerComponents.month) should] equal:theValue(dateComponents.month)];
         [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.minimumYear.intValue)];
-        [[monthPickerComponents.timeZone should] equal:[NSTimeZone systemTimeZone]];
+        [[monthPickerComponents.timeZone should] equal:[NSTimeZone defaultTimeZone]];
         
         // Set new minimum year, refresh the date components
         monthPicker.minimumYear = @2015;
