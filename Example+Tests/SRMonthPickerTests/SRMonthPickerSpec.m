@@ -33,7 +33,9 @@ describe(@"SRMonthPicker", ^{
         NSDateComponents *monthPickerComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSTimeZoneCalendarUnit) fromDate:monthPicker.date];
         NSDateComponents *todayComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:[NSDate date]];
         
-        [[theValue(monthPickerComponents.day) shouldNot] equal:theValue(todayComponents.day)];
+        if (todayComponents.day != 1) {
+            [[theValue(monthPickerComponents.day) shouldNot] equal:theValue(todayComponents.day)];
+        }
         [[theValue(monthPickerComponents.day) should] equal:theValue(1)];
         [[theValue(monthPickerComponents.hour) should] equal:theValue(0)];
         [[theValue(monthPickerComponents.minute) should] equal:theValue(0)];
