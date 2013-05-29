@@ -63,7 +63,7 @@
 
 /**
   The designated delegate for the month picker.
-  @warning The delegate property is already used internally for 
+  @warning **Important:** The delegate property is already used internally for 
   UIPickerView's delegate - **please don't read from or assign to it**!
   */
 @property (nonatomic, weak) id<SRMonthPickerDelegate> monthPickerDelegate;
