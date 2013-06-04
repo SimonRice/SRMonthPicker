@@ -99,6 +99,7 @@
     self.delegate = self;
     
     _enableColourRow = YES;
+    _wrapMonths = YES;
 }
 
 -(id<UIPickerViewDelegate>)delegate
@@ -175,6 +176,12 @@
     [self setDate:[[NSCalendar currentCalendar] dateFromComponents:components]];
 }
 
+-(void)setWrapMonths:(BOOL)wrapMonths
+{
+    _wrapMonths = wrapMonths;
+    [self reloadAllComponents];
+}
+
 -(int)yearFromRow:(NSUInteger)row
 {
     int minYear = DEFAULT_MINIMUM_YEAR;
@@ -205,8 +212,14 @@
     else if (self.maximumYear && components.year > self.maximumYear.integerValue)
         components.year = self.maximumYear.integerValue;
     
-    int monthMidpoint = self.monthStrings.count * (MONTH_ROW_MULTIPLIER / 2);
-    [self selectRow:(components.month - 1 + monthMidpoint) inComponent:self.monthComponent animated:NO];
+    if(self.wrapMonths){
+        int monthMidpoint = self.monthStrings.count * (MONTH_ROW_MULTIPLIER / 2);
+        
+        [self selectRow:(components.month - 1 + monthMidpoint) inComponent:self.monthComponent animated:NO];
+    }
+    else {
+        [self selectRow:(components.month - 1) inComponent:self.monthComponent animated:NO];
+    }
     [self selectRow:[self rowFromYear:components.year] inComponent:self.yearComponent animated:NO];
     
     _date = [[NSCalendar currentCalendar] dateFromComponents:components];
@@ -236,7 +249,9 @@
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    if (component == self.monthComponent)
+    if (component == self.monthComponent && !self.wrapMonths)
+        return self.monthStrings.count;
+    else if(component == self.monthComponent)
         return MONTH_ROW_MULTIPLIER * self.monthStrings.count;
     
     int maxYear = DEFAULT_MAXIMUM_YEAR;
