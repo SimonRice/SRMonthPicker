@@ -84,6 +84,9 @@
 /// A Boolean value that determines whether the year is shown first.
 @property (nonatomic) BOOL yearFirst;
 
+/// A Boolean value that determines whether the month wraps
+@property (nonatomic) BOOL wrapMonths;
+
 /**
   A Boolean value that determines whether the current month & year are coloured.
   */
