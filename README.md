@@ -1,6 +1,8 @@
 # SRMonthPicker
 
-[![Build Status](https://travis-ci.org/simonrice/SRMonthPicker.png)](https://travis-ci.org/simonrice/SRMonthPicker)
+[![Build Status](https://travis-ci.org/simonrice/SRMonthPicker.png)](https://travis-ci.org/simonrice/SRMonthPicker) 
+[![CocoaPods Platform](http://cocoapod-badges.herokuapp.com/p/SRMonthPicker/badge.png)](http://cocoadocs.org/docsets/SRMonthPicker) 
+[![CocoaPods Version](http://cocoapod-badges.herokuapp.com/v/SRMonthPicker/badge.png)](http://cocoadocs.org/docsets/SRMonthPicker) 
 
 Like UIDatePicker, but without the days.
 
