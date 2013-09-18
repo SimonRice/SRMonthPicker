@@ -99,6 +99,7 @@
   & year.
 */
 -(id)init;
+
 /**
   Initializes and returns a newly allocated month picker with the specified 
   date.
