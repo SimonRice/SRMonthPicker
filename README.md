@@ -28,6 +28,8 @@ Then run `pod install` to install the dependencies.
 
 Alternatively, simply clone this project as a submodule or download the classes, and include them in your project.  Bear in mind this library uses ARC, so you should create a Static Library if your project doesn't.
 
+If you're using QuickDialog, you may be interested in [QMonthElement](https://github.com/simonrice/QMonthElement), which integrates one of these month pickers into your QuickDialog forms.
+
 ## Usage
 
 For Interface Builder (including Storyboard), simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Editor, set the class of the picker to `SRMonthPicker`.  If you're building your interfaces by code, it's simply a case of initialising an SRMonthPicker instance & adding a subview.
