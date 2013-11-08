@@ -22,11 +22,6 @@
 
 #import "SRMonthPicker.h"
 
-#define MONTH_ROW_MULTIPLIER 340
-#define DEFAULT_MINIMUM_YEAR 1
-#define DEFAULT_MAXIMUM_YEAR 99999
-#define DATE_COMPONENT_FLAGS NSMonthCalendarUnit | NSYearCalendarUnit
-
 @interface SRMonthPicker()
 
 @property (nonatomic) int monthComponent;
@@ -40,10 +35,10 @@
 
 @implementation SRMonthPicker
 
-@synthesize date = _date;
-@synthesize monthStrings = _monthStrings;
-@synthesize enableColourRow = _enableColourRow;
-@synthesize monthPickerDelegate = _monthPickerDelegate;
+static const int SRMonthRowMultiplier = 340;
+static const int SRDefaultMinimumYear = 1;
+static const int SRDefaultMaximumYear = 99999;
+static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearCalendarUnit;
 
 -(id)initWithDate:(NSDate *)date
 {
@@ -151,7 +146,7 @@
 -(void)setMinimumYear:(NSNumber *)minimumYear
 {
     NSDate* currentDate = self.date;
-    NSDateComponents* components = [[NSCalendar currentCalendar] components:DATE_COMPONENT_FLAGS fromDate:currentDate];
+    NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:currentDate];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
     if (minimumYear && components.year < minimumYear.integerValue)
@@ -165,7 +160,7 @@
 -(void)setMaximumYear:(NSNumber *)maximumYear
 {
     NSDate* currentDate = self.date;
-    NSDateComponents* components = [[NSCalendar currentCalendar] components:DATE_COMPONENT_FLAGS fromDate:currentDate];
+    NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:currentDate];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
     if (maximumYear && components.year > maximumYear.integerValue)
@@ -184,7 +179,7 @@
 
 -(int)yearFromRow:(NSUInteger)row
 {
-    int minYear = DEFAULT_MINIMUM_YEAR;
+    int minYear = SRDefaultMinimumYear;
     
     if (self.minimumYear)
         minYear = self.minimumYear.integerValue;
@@ -194,7 +189,7 @@
 
 -(NSUInteger)rowFromYear:(int)year
 {
-    int minYear = DEFAULT_MINIMUM_YEAR;
+    int minYear = SRDefaultMinimumYear;
     
     if (self.minimumYear)
         minYear = self.minimumYear.integerValue;
@@ -204,7 +199,7 @@
 
 -(void)setDate:(NSDate *)date
 {
-    NSDateComponents* components = [[NSCalendar currentCalendar] components:DATE_COMPONENT_FLAGS fromDate:date];
+    NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:date];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
     if (self.minimumYear && components.year < self.minimumYear.integerValue)
@@ -213,7 +208,7 @@
         components.year = self.maximumYear.integerValue;
     
     if(self.wrapMonths){
-        int monthMidpoint = self.monthStrings.count * (MONTH_ROW_MULTIPLIER / 2);
+        int monthMidpoint = self.monthStrings.count * (SRMonthRowMultiplier / 2);
         
         [self selectRow:(components.month - 1 + monthMidpoint) inComponent:self.monthComponent animated:NO];
     }
@@ -252,9 +247,9 @@
     if (component == self.monthComponent && !self.wrapMonths)
         return self.monthStrings.count;
     else if(component == self.monthComponent)
-        return MONTH_ROW_MULTIPLIER * self.monthStrings.count;
+        return SRMonthRowMultiplier * self.monthStrings.count;
     
-    int maxYear = DEFAULT_MAXIMUM_YEAR;
+    int maxYear = SRDefaultMaximumYear;
     if (self.maximumYear)
         maxYear = self.maximumYear.integerValue;
     
