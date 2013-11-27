@@ -1,9 +1,13 @@
 PODS:
-  - Kiwi (2.0.6)
+  - Kiwi/ARC (2.2.3)
+  - Kiwi/NonARC (2.2.3)
+  - Kiwi/XCTest (2.2.3):
+    - Kiwi/ARC
+    - Kiwi/NonARC
   - SRMonthPicker (0.2.9)
 
 DEPENDENCIES:
-  - Kiwi
+  - Kiwi/XCTest
   - SRMonthPicker (from `..`)
 
 EXTERNAL SOURCES:
@@ -11,7 +15,7 @@ EXTERNAL SOURCES:
     :path: ..
 
 SPEC CHECKSUMS:
-  Kiwi: 56082a80f942de4d10423d8d8a599ab30cf50228
+  Kiwi: 04c51e880831d291748ec702d42c4101f7eb95c9
   SRMonthPicker: 483ab343465f8b88bb54394e37be692b50418fd1
 
 COCOAPODS: 0.28.0
