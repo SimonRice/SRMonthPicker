@@ -1,6 +1,6 @@
 platform :ios, "5.0"
 
-pod "SRMonthPicker", :path => "../."
+pod "SRMonthPicker", :path => ".."
 
 target :SRMonthPickerTests, :exclusive => true do
    pod "Kiwi"
