@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "NO">
+      buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,21 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "550B7C66D1F543B89AFD1FD0"
-               BuildableName = "libPods.a"
-               BlueprintName = "Pods"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4F79DF0174174E00067FB31"
+               BlueprintIdentifier = "F4ACBCDA1852D9F400E1D87E"
                BuildableName = "SRMonthPickerExample.app"
                BlueprintName = "SRMonthPickerExample"
                ReferencedContainer = "container:SRMonthPickerExample.xcodeproj">
@@ -46,8 +32,8 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4F79E10174174E00067FB31"
-               BuildableName = "SRMonthPickerTests.octest"
+               BlueprintIdentifier = "F4ACBCFB1852D9F400E1D87E"
+               BuildableName = "SRMonthPickerTests.xctest"
                BlueprintName = "SRMonthPickerTests"
                ReferencedContainer = "container:SRMonthPickerExample.xcodeproj">
             </BuildableReference>
@@ -56,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F4F79DF0174174E00067FB31"
+            BlueprintIdentifier = "F4ACBCDA1852D9F400E1D87E"
             BuildableName = "SRMonthPickerExample.app"
             BlueprintName = "SRMonthPickerExample"
             ReferencedContainer = "container:SRMonthPickerExample.xcodeproj">
@@ -75,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F4F79DF0174174E00067FB31"
+            BlueprintIdentifier = "F4ACBCDA1852D9F400E1D87E"
             BuildableName = "SRMonthPickerExample.app"
             BlueprintName = "SRMonthPickerExample"
             ReferencedContainer = "container:SRMonthPickerExample.xcodeproj">
@@ -93,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F4F79DF0174174E00067FB31"
+            BlueprintIdentifier = "F4ACBCDA1852D9F400E1D87E"
             BuildableName = "SRMonthPickerExample.app"
             BlueprintName = "SRMonthPickerExample"
             ReferencedContainer = "container:SRMonthPickerExample.xcodeproj">

@@ -7,165 +7,152 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2E9D62CEE7C47EFAFE8252E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3992571658DC4505AA77E5C4 /* libPods.a */; };
-		BD9F179DE0354E6FB68C4DDA /* libPods-SRMonthPickerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAE28E8EC904EF08BC53AC2 /* libPods-SRMonthPickerTests.a */; };
-		F44DD86217417C3600C4C3B4 /* SRMonthPickerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F44DD86117417C3600C4C3B4 /* SRMonthPickerSpec.m */; };
-		F4F79DF5174174E00067FB31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F79DF4174174E00067FB31 /* UIKit.framework */; };
-		F4F79DF7174174E00067FB31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F79DF6174174E00067FB31 /* Foundation.framework */; };
-		F4F79DF9174174E00067FB31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F79DF8174174E00067FB31 /* CoreGraphics.framework */; };
-		F4F79DFF174174E00067FB31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4F79DFD174174E00067FB31 /* InfoPlist.strings */; };
-		F4F79E01174174E00067FB31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F79E00174174E00067FB31 /* main.m */; };
-		F4F79E05174174E00067FB31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F79E04174174E00067FB31 /* AppDelegate.m */; };
-		F4F79E07174174E00067FB31 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F79E06174174E00067FB31 /* Default.png */; };
-		F4F79E09174174E00067FB31 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F79E08174174E00067FB31 /* Default@2x.png */; };
-		F4F79E0B174174E00067FB31 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4F79E0A174174E00067FB31 /* Default-568h@2x.png */; };
-		F4F79E13174174E00067FB31 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F79E12174174E00067FB31 /* SenTestingKit.framework */; };
-		F4F79E14174174E00067FB31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F79DF4174174E00067FB31 /* UIKit.framework */; };
-		F4F79E15174174E00067FB31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F79DF6174174E00067FB31 /* Foundation.framework */; };
-		F4F79E2E1741768A0067FB31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F79E2D1741768A0067FB31 /* ViewController.m */; };
-		F4F79E361741776F0067FB31 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F79E341741776F0067FB31 /* MainStoryboard.storyboard */; };
+		2E036F3518CC44D6948F2377 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D45B911F4D4D718943F237 /* libPods.a */; };
+		E8D3D4C23AFF4BD39776CA0A /* libPods-SRMonthPickerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DFBB94DE2040B298251ABA /* libPods-SRMonthPickerTests.a */; };
+		F447109E1852DCC700C83B85 /* SRMonthPickerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F447109D1852DCC700C83B85 /* SRMonthPickerSpec.m */; };
+		F4ACBCDF1852D9F400E1D87E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4ACBCDE1852D9F400E1D87E /* Foundation.framework */; };
+		F4ACBCE11852D9F400E1D87E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4ACBCE01852D9F400E1D87E /* CoreGraphics.framework */; };
+		F4ACBCE31852D9F400E1D87E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4ACBCE21852D9F400E1D87E /* UIKit.framework */; };
+		F4ACBCEB1852D9F400E1D87E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACBCEA1852D9F400E1D87E /* main.m */; };
+		F4ACBCF51852D9F400E1D87E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACBCF41852D9F400E1D87E /* ViewController.m */; };
+		F4ACBCFE1852D9F400E1D87E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4ACBCFD1852D9F400E1D87E /* XCTest.framework */; };
+		F4ACBCFF1852D9F400E1D87E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4ACBCDE1852D9F400E1D87E /* Foundation.framework */; };
+		F4ACBD001852D9F400E1D87E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4ACBCE21852D9F400E1D87E /* UIKit.framework */; };
+		F4ACBD181852DAB300E1D87E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACBD171852DAB300E1D87E /* AppDelegate.m */; };
+		F4ACBD1E1852DB4300E1D87E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4ACBD1C1852DB4300E1D87E /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F4F79E16174174E00067FB31 /* PBXContainerItemProxy */ = {
+		F4ACBD011852D9F400E1D87E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F4F79DE9174174E00067FB31 /* Project object */;
+			containerPortal = F4ACBCD31852D9F400E1D87E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F4F79DF0174174E00067FB31;
+			remoteGlobalIDString = F4ACBCDA1852D9F400E1D87E;
 			remoteInfo = SRMonthPickerExample;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2AE33667439345F984ACA9AB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		3992571658DC4505AA77E5C4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AAE28E8EC904EF08BC53AC2 /* libPods-SRMonthPickerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SRMonthPickerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4A84AE1D43640E3AD25A845 /* Pods-SRMonthPickerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRMonthPickerTests.xcconfig"; path = "Pods/Pods-SRMonthPickerTests.xcconfig"; sourceTree = SOURCE_ROOT; };
-		F44DD86017417C3600C4C3B4 /* SRMonthPickerSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRMonthPickerSpec.h; path = SRMonthPickerTests/SRMonthPickerSpec.h; sourceTree = SOURCE_ROOT; };
-		F44DD86117417C3600C4C3B4 /* SRMonthPickerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRMonthPickerSpec.m; path = SRMonthPickerTests/SRMonthPickerSpec.m; sourceTree = SOURCE_ROOT; };
-		F44DD86317417C4000C4C3B4 /* SRMonthPickerTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SRMonthPickerTests-Info.plist"; path = "SRMonthPickerTests/SRMonthPickerTests-Info.plist"; sourceTree = SOURCE_ROOT; };
-		F4F79DF1174174E00067FB31 /* SRMonthPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRMonthPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4F79DF4174174E00067FB31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F4F79DF6174174E00067FB31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F4F79DF8174174E00067FB31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F4F79DFC174174E00067FB31 /* SRMonthPickerExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SRMonthPickerExample-Info.plist"; sourceTree = "<group>"; };
-		F4F79DFE174174E00067FB31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F4F79E00174174E00067FB31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F4F79E02174174E00067FB31 /* SRMonthPickerExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SRMonthPickerExample-Prefix.pch"; sourceTree = "<group>"; };
-		F4F79E03174174E00067FB31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F4F79E04174174E00067FB31 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F4F79E06174174E00067FB31 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		F4F79E08174174E00067FB31 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		F4F79E0A174174E00067FB31 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F4F79E11174174E00067FB31 /* SRMonthPickerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRMonthPickerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4F79E12174174E00067FB31 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		F4F79E2C1741768A0067FB31 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F4F79E2D1741768A0067FB31 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F4F79E351741776F0067FB31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		376FE2B34F5E4FEDBFFDF1F4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		56DFBB94DE2040B298251ABA /* libPods-SRMonthPickerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SRMonthPickerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9407D31D9F4A40C1B08959AE /* Pods-SRMonthPickerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRMonthPickerTests.xcconfig"; path = "Pods/Pods-SRMonthPickerTests.xcconfig"; sourceTree = "<group>"; };
+		95D45B911F4D4D718943F237 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F447109C1852DCC700C83B85 /* SRMonthPickerSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMonthPickerSpec.h; sourceTree = "<group>"; };
+		F447109D1852DCC700C83B85 /* SRMonthPickerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMonthPickerSpec.m; sourceTree = "<group>"; };
+		F4ACBCDB1852D9F400E1D87E /* SRMonthPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRMonthPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4ACBCDE1852D9F400E1D87E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F4ACBCE01852D9F400E1D87E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F4ACBCE21852D9F400E1D87E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F4ACBCE61852D9F400E1D87E /* SRMonthPickerExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SRMonthPickerExample-Info.plist"; sourceTree = "<group>"; };
+		F4ACBCEA1852D9F400E1D87E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4ACBCEC1852D9F400E1D87E /* SRMonthPickerExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SRMonthPickerExample-Prefix.pch"; sourceTree = "<group>"; };
+		F4ACBCF31852D9F400E1D87E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F4ACBCF41852D9F400E1D87E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F4ACBCFC1852D9F400E1D87E /* SRMonthPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRMonthPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4ACBCFD1852D9F400E1D87E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F4ACBD051852D9F400E1D87E /* SRMonthPickerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SRMonthPickerTests-Info.plist"; sourceTree = "<group>"; };
+		F4ACBD161852DAB300E1D87E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4ACBD171852DAB300E1D87E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F4ACBD1D1852DB4300E1D87E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F4F79DEE174174E00067FB31 /* Frameworks */ = {
+		F4ACBCD81852D9F400E1D87E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F79DF5174174E00067FB31 /* UIKit.framework in Frameworks */,
-				F4F79DF7174174E00067FB31 /* Foundation.framework in Frameworks */,
-				F4F79DF9174174E00067FB31 /* CoreGraphics.framework in Frameworks */,
-				A2E9D62CEE7C47EFAFE8252E /* libPods.a in Frameworks */,
+				F4ACBCE11852D9F400E1D87E /* CoreGraphics.framework in Frameworks */,
+				F4ACBCE31852D9F400E1D87E /* UIKit.framework in Frameworks */,
+				F4ACBCDF1852D9F400E1D87E /* Foundation.framework in Frameworks */,
+				2E036F3518CC44D6948F2377 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4F79E0D174174E00067FB31 /* Frameworks */ = {
+		F4ACBCF91852D9F400E1D87E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F79E13174174E00067FB31 /* SenTestingKit.framework in Frameworks */,
-				F4F79E14174174E00067FB31 /* UIKit.framework in Frameworks */,
-				F4F79E15174174E00067FB31 /* Foundation.framework in Frameworks */,
-				BD9F179DE0354E6FB68C4DDA /* libPods-SRMonthPickerTests.a in Frameworks */,
+				F4ACBCFE1852D9F400E1D87E /* XCTest.framework in Frameworks */,
+				F4ACBD001852D9F400E1D87E /* UIKit.framework in Frameworks */,
+				F4ACBCFF1852D9F400E1D87E /* Foundation.framework in Frameworks */,
+				E8D3D4C23AFF4BD39776CA0A /* libPods-SRMonthPickerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F4F79DE8174174E00067FB31 = {
+		F4ACBCD21852D9F400E1D87E = {
 			isa = PBXGroup;
 			children = (
-				F4F79DFA174174E00067FB31 /* SRMonthPickerExample */,
-				F4F79E18174174E00067FB31 /* SRMonthPickerTests */,
-				F4F79DF3174174E00067FB31 /* Frameworks */,
-				F4F79DF2174174E00067FB31 /* Products */,
-				2AE33667439345F984ACA9AB /* Pods.xcconfig */,
-				B4A84AE1D43640E3AD25A845 /* Pods-SRMonthPickerTests.xcconfig */,
+				F4ACBCE41852D9F400E1D87E /* SRMonthPickerExample */,
+				F4ACBD031852D9F400E1D87E /* SRMonthPickerTests */,
+				F4ACBCDD1852D9F400E1D87E /* Frameworks */,
+				F4ACBCDC1852D9F400E1D87E /* Products */,
+				376FE2B34F5E4FEDBFFDF1F4 /* Pods.xcconfig */,
+				9407D31D9F4A40C1B08959AE /* Pods-SRMonthPickerTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
-		F4F79DF2174174E00067FB31 /* Products */ = {
+		F4ACBCDC1852D9F400E1D87E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4F79DF1174174E00067FB31 /* SRMonthPickerExample.app */,
-				F4F79E11174174E00067FB31 /* SRMonthPickerTests.octest */,
+				F4ACBCDB1852D9F400E1D87E /* SRMonthPickerExample.app */,
+				F4ACBCFC1852D9F400E1D87E /* SRMonthPickerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4F79DF3174174E00067FB31 /* Frameworks */ = {
+		F4ACBCDD1852D9F400E1D87E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F4F79DF4174174E00067FB31 /* UIKit.framework */,
-				F4F79DF6174174E00067FB31 /* Foundation.framework */,
-				F4F79DF8174174E00067FB31 /* CoreGraphics.framework */,
-				F4F79E12174174E00067FB31 /* SenTestingKit.framework */,
-				3992571658DC4505AA77E5C4 /* libPods.a */,
-				3AAE28E8EC904EF08BC53AC2 /* libPods-SRMonthPickerTests.a */,
+				F4ACBCDE1852D9F400E1D87E /* Foundation.framework */,
+				F4ACBCE01852D9F400E1D87E /* CoreGraphics.framework */,
+				F4ACBCE21852D9F400E1D87E /* UIKit.framework */,
+				F4ACBCFD1852D9F400E1D87E /* XCTest.framework */,
+				95D45B911F4D4D718943F237 /* libPods.a */,
+				56DFBB94DE2040B298251ABA /* libPods-SRMonthPickerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F4F79DFA174174E00067FB31 /* SRMonthPickerExample */ = {
+		F4ACBCE41852D9F400E1D87E /* SRMonthPickerExample */ = {
 			isa = PBXGroup;
 			children = (
-				F4F79E03174174E00067FB31 /* AppDelegate.h */,
-				F4F79E04174174E00067FB31 /* AppDelegate.m */,
-				F4F79E2C1741768A0067FB31 /* ViewController.h */,
-				F4F79E2D1741768A0067FB31 /* ViewController.m */,
-				F4F79E341741776F0067FB31 /* MainStoryboard.storyboard */,
-				F4F79DFB174174E00067FB31 /* Supporting Files */,
+				F4ACBD161852DAB300E1D87E /* AppDelegate.h */,
+				F4ACBD171852DAB300E1D87E /* AppDelegate.m */,
+				F4ACBD1C1852DB4300E1D87E /* MainStoryboard.storyboard */,
+				F4ACBCF31852D9F400E1D87E /* ViewController.h */,
+				F4ACBCF41852D9F400E1D87E /* ViewController.m */,
+				F4ACBCE51852D9F400E1D87E /* Supporting Files */,
 			);
 			path = SRMonthPickerExample;
 			sourceTree = "<group>";
 		};
-		F4F79DFB174174E00067FB31 /* Supporting Files */ = {
+		F4ACBCE51852D9F400E1D87E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F4F79DFC174174E00067FB31 /* SRMonthPickerExample-Info.plist */,
-				F4F79DFD174174E00067FB31 /* InfoPlist.strings */,
-				F4F79E00174174E00067FB31 /* main.m */,
-				F4F79E02174174E00067FB31 /* SRMonthPickerExample-Prefix.pch */,
-				F4F79E06174174E00067FB31 /* Default.png */,
-				F4F79E08174174E00067FB31 /* Default@2x.png */,
-				F4F79E0A174174E00067FB31 /* Default-568h@2x.png */,
+				F4ACBCE61852D9F400E1D87E /* SRMonthPickerExample-Info.plist */,
+				F4ACBCEA1852D9F400E1D87E /* main.m */,
+				F4ACBCEC1852D9F400E1D87E /* SRMonthPickerExample-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F4F79E18174174E00067FB31 /* SRMonthPickerTests */ = {
+		F4ACBD031852D9F400E1D87E /* SRMonthPickerTests */ = {
 			isa = PBXGroup;
 			children = (
-				F44DD86017417C3600C4C3B4 /* SRMonthPickerSpec.h */,
-				F44DD86117417C3600C4C3B4 /* SRMonthPickerSpec.m */,
-				F4F79E19174174E00067FB31 /* Supporting Files */,
+				F447109C1852DCC700C83B85 /* SRMonthPickerSpec.h */,
+				F447109D1852DCC700C83B85 /* SRMonthPickerSpec.m */,
+				F4ACBD041852D9F400E1D87E /* Supporting Files */,
 			);
-			name = SRMonthPickerTests;
-			path = SRMonthPickerExampleTests;
+			path = SRMonthPickerTests;
 			sourceTree = "<group>";
 		};
-		F4F79E19174174E00067FB31 /* Supporting Files */ = {
+		F4ACBD041852D9F400E1D87E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F44DD86317417C4000C4C3B4 /* SRMonthPickerTests-Info.plist */,
+				F4ACBD051852D9F400E1D87E /* SRMonthPickerTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -173,15 +160,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4F79DF0174174E00067FB31 /* SRMonthPickerExample */ = {
+		F4ACBCDA1852D9F400E1D87E /* SRMonthPickerExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4F79E23174174E00067FB31 /* Build configuration list for PBXNativeTarget "SRMonthPickerExample" */;
+			buildConfigurationList = F4ACBD0D1852D9F400E1D87E /* Build configuration list for PBXNativeTarget "SRMonthPickerExample" */;
 			buildPhases = (
-				511B5C57B5EF432099D24021 /* Check Pods Manifest.lock */,
-				F4F79DED174174E00067FB31 /* Sources */,
-				F4F79DEE174174E00067FB31 /* Frameworks */,
-				F4F79DEF174174E00067FB31 /* Resources */,
-				C08BD52C829A4D00AC5B314E /* Copy Pods Resources */,
+				87C7F103B37A4E9F8F1C6030 /* Check Pods Manifest.lock */,
+				F4ACBCD71852D9F400E1D87E /* Sources */,
+				F4ACBCD81852D9F400E1D87E /* Frameworks */,
+				F4ACBCD91852D9F400E1D87E /* Resources */,
+				B9CF5FD90E534C9AA2630735 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,71 +176,72 @@
 			);
 			name = SRMonthPickerExample;
 			productName = SRMonthPickerExample;
-			productReference = F4F79DF1174174E00067FB31 /* SRMonthPickerExample.app */;
+			productReference = F4ACBCDB1852D9F400E1D87E /* SRMonthPickerExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F4F79E10174174E00067FB31 /* SRMonthPickerTests */ = {
+		F4ACBCFB1852D9F400E1D87E /* SRMonthPickerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4F79E26174174E00067FB31 /* Build configuration list for PBXNativeTarget "SRMonthPickerTests" */;
+			buildConfigurationList = F4ACBD101852D9F400E1D87E /* Build configuration list for PBXNativeTarget "SRMonthPickerTests" */;
 			buildPhases = (
-				DC110A8C6F654F598A05AEDB /* Check Pods Manifest.lock */,
-				F4F79E0C174174E00067FB31 /* Sources */,
-				F4F79E0D174174E00067FB31 /* Frameworks */,
-				F4F79E0E174174E00067FB31 /* Resources */,
-				F4F79E0F174174E00067FB31 /* ShellScript */,
-				FCD4C3C9D6FE4D4780855DE8 /* Copy Pods Resources */,
+				04D22F5D30D44E48BE68E847 /* Check Pods Manifest.lock */,
+				F4ACBCF81852D9F400E1D87E /* Sources */,
+				F4ACBCF91852D9F400E1D87E /* Frameworks */,
+				F4ACBCFA1852D9F400E1D87E /* Resources */,
+				787CD66ED18747C6B6BEC6F3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F4F79E17174174E00067FB31 /* PBXTargetDependency */,
+				F4ACBD021852D9F400E1D87E /* PBXTargetDependency */,
 			);
 			name = SRMonthPickerTests;
-			productName = SRMonthPickerExampleTests;
-			productReference = F4F79E11174174E00067FB31 /* SRMonthPickerTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productName = SRMonthPickerTests;
+			productReference = F4ACBCFC1852D9F400E1D87E /* SRMonthPickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F4F79DE9174174E00067FB31 /* Project object */ = {
+		F4ACBCD31852D9F400E1D87E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Simon Rice";
+				TargetAttributes = {
+					F4ACBCFB1852D9F400E1D87E = {
+						TestTargetID = F4ACBCDA1852D9F400E1D87E;
+					};
+				};
 			};
-			buildConfigurationList = F4F79DEC174174E00067FB31 /* Build configuration list for PBXProject "SRMonthPickerExample" */;
+			buildConfigurationList = F4ACBCD61852D9F400E1D87E /* Build configuration list for PBXProject "SRMonthPickerExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = F4F79DE8174174E00067FB31;
-			productRefGroup = F4F79DF2174174E00067FB31 /* Products */;
+			mainGroup = F4ACBCD21852D9F400E1D87E;
+			productRefGroup = F4ACBCDC1852D9F400E1D87E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4F79DF0174174E00067FB31 /* SRMonthPickerExample */,
-				F4F79E10174174E00067FB31 /* SRMonthPickerTests */,
+				F4ACBCDA1852D9F400E1D87E /* SRMonthPickerExample */,
+				F4ACBCFB1852D9F400E1D87E /* SRMonthPickerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F4F79DEF174174E00067FB31 /* Resources */ = {
+		F4ACBCD91852D9F400E1D87E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F79DFF174174E00067FB31 /* InfoPlist.strings in Resources */,
-				F4F79E07174174E00067FB31 /* Default.png in Resources */,
-				F4F79E09174174E00067FB31 /* Default@2x.png in Resources */,
-				F4F79E0B174174E00067FB31 /* Default-568h@2x.png in Resources */,
-				F4F79E361741776F0067FB31 /* MainStoryboard.storyboard in Resources */,
+				F4ACBD1E1852DB4300E1D87E /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4F79E0E174174E00067FB31 /* Resources */ = {
+		F4ACBCFA1852D9F400E1D87E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,7 +251,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		511B5C57B5EF432099D24021 /* Check Pods Manifest.lock */ = {
+		04D22F5D30D44E48BE68E847 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,49 +264,9 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
-		C08BD52C829A4D00AC5B314E /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-		};
-		DC110A8C6F654F598A05AEDB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-		};
-		F4F79E0F174174E00067FB31 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-		FCD4C3C9D6FE4D4780855DE8 /* Copy Pods Resources */ = {
+		787CD66ED18747C6B6BEC6F3 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,51 +279,74 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-SRMonthPickerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87C7F103B37A4E9F8F1C6030 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9CF5FD90E534C9AA2630735 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F4F79DED174174E00067FB31 /* Sources */ = {
+		F4ACBCD71852D9F400E1D87E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F79E01174174E00067FB31 /* main.m in Sources */,
-				F4F79E05174174E00067FB31 /* AppDelegate.m in Sources */,
-				F4F79E2E1741768A0067FB31 /* ViewController.m in Sources */,
+				F4ACBCF51852D9F400E1D87E /* ViewController.m in Sources */,
+				F4ACBCEB1852D9F400E1D87E /* main.m in Sources */,
+				F4ACBD181852DAB300E1D87E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4F79E0C174174E00067FB31 /* Sources */ = {
+		F4ACBCF81852D9F400E1D87E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F44DD86217417C3600C4C3B4 /* SRMonthPickerSpec.m in Sources */,
+				F447109E1852DCC700C83B85 /* SRMonthPickerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F4F79E17174174E00067FB31 /* PBXTargetDependency */ = {
+		F4ACBD021852D9F400E1D87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F4F79DF0174174E00067FB31 /* SRMonthPickerExample */;
-			targetProxy = F4F79E16174174E00067FB31 /* PBXContainerItemProxy */;
+			target = F4ACBCDA1852D9F400E1D87E /* SRMonthPickerExample */;
+			targetProxy = F4ACBD011852D9F400E1D87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F4F79DFD174174E00067FB31 /* InfoPlist.strings */ = {
+		F4ACBD1C1852DB4300E1D87E /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F4F79DFE174174E00067FB31 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F4F79E341741776F0067FB31 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4F79E351741776F0067FB31 /* en */,
+				F4ACBD1D1852DB4300E1D87E /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -383,17 +354,22 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F4F79E21174174E00067FB31 /* Debug */ = {
+		F4ACBD0B1852D9F400E1D87E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -405,44 +381,57 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		F4F79E22174174E00067FB31 /* Release */ = {
+		F4ACBD0C1852D9F400E1D87E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		F4F79E24174174E00067FB31 /* Debug */ = {
+		F4ACBD0E1852D9F400E1D87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AE33667439345F984ACA9AB /* Pods.xcconfig */;
+			baseConfigurationReference = 376FE2B34F5E4FEDBFFDF1F4 /* Pods.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SRMonthPickerExample/SRMonthPickerExample-Prefix.pch";
 				INFOPLIST_FILE = "SRMonthPickerExample/SRMonthPickerExample-Info.plist";
@@ -451,10 +440,12 @@
 			};
 			name = Debug;
 		};
-		F4F79E25174174E00067FB31 /* Release */ = {
+		F4ACBD0F1852D9F400E1D87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AE33667439345F984ACA9AB /* Pods.xcconfig */;
+			baseConfigurationReference = 376FE2B34F5E4FEDBFFDF1F4 /* Pods.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SRMonthPickerExample/SRMonthPickerExample-Prefix.pch";
 				INFOPLIST_FILE = "SRMonthPickerExample/SRMonthPickerExample-Info.plist";
@@ -463,73 +454,81 @@
 			};
 			name = Release;
 		};
-		F4F79E27174174E00067FB31 /* Debug */ = {
+		F4ACBD111852D9F400E1D87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4A84AE1D43640E3AD25A845 /* Pods-SRMonthPickerTests.xcconfig */;
+			baseConfigurationReference = 9407D31D9F4A40C1B08959AE /* Pods-SRMonthPickerTests.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SRMonthPickerExample.app/SRMonthPickerExample";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SRMonthPickerExample/SRMonthPickerExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "SRMonthPickerTests/SRMonthPickerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		F4F79E28174174E00067FB31 /* Release */ = {
+		F4ACBD121852D9F400E1D87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4A84AE1D43640E3AD25A845 /* Pods-SRMonthPickerTests.xcconfig */;
+			baseConfigurationReference = 9407D31D9F4A40C1B08959AE /* Pods-SRMonthPickerTests.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SRMonthPickerExample.app/SRMonthPickerExample";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SRMonthPickerExample/SRMonthPickerExample-Prefix.pch";
 				INFOPLIST_FILE = "SRMonthPickerTests/SRMonthPickerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F4F79DEC174174E00067FB31 /* Build configuration list for PBXProject "SRMonthPickerExample" */ = {
+		F4ACBCD61852D9F400E1D87E /* Build configuration list for PBXProject "SRMonthPickerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F4F79E21174174E00067FB31 /* Debug */,
-				F4F79E22174174E00067FB31 /* Release */,
+				F4ACBD0B1852D9F400E1D87E /* Debug */,
+				F4ACBD0C1852D9F400E1D87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4F79E23174174E00067FB31 /* Build configuration list for PBXNativeTarget "SRMonthPickerExample" */ = {
+		F4ACBD0D1852D9F400E1D87E /* Build configuration list for PBXNativeTarget "SRMonthPickerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F4F79E24174174E00067FB31 /* Debug */,
-				F4F79E25174174E00067FB31 /* Release */,
+				F4ACBD0E1852D9F400E1D87E /* Debug */,
+				F4ACBD0F1852D9F400E1D87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4F79E26174174E00067FB31 /* Build configuration list for PBXNativeTarget "SRMonthPickerTests" */ = {
+		F4ACBD101852D9F400E1D87E /* Build configuration list for PBXNativeTarget "SRMonthPickerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F4F79E27174174E00067FB31 /* Debug */,
-				F4F79E28174174E00067FB31 /* Release */,
+				F4ACBD111852D9F400E1D87E /* Debug */,
+				F4ACBD121852D9F400E1D87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F4F79DE9174174E00067FB31 /* Project object */;
+	rootObject = F4ACBCD31852D9F400E1D87E /* Project object */;
 }
