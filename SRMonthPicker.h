@@ -93,6 +93,12 @@
 @property (nonatomic) BOOL enableColourRow;
 
 /**
+ Font and color to be used. Default - System Bold 24, Black.
+ */
+@property (nonatomic, strong) UIFont *font;
+@property (nonatomic, strong) UIColor *fontColor;
+
+/**
   Designated initialiser.
 
   Initializes and returns a newly allocated month picker with the current month 
