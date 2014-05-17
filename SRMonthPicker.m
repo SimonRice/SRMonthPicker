@@ -24,20 +24,21 @@
 
 @interface SRMonthPicker()
 
-@property (nonatomic) int monthComponent;
-@property (nonatomic) int yearComponent;
+@property (nonatomic) NSInteger monthComponent;
+@property (nonatomic) NSInteger yearComponent;
 @property (nonatomic, readonly) NSArray* monthStrings;
 
--(int)yearFromRow:(NSUInteger)row;
--(NSUInteger)rowFromYear:(int)year;
+-(void)p_prepare;
+-(NSInteger)p_yearFromRow:(NSUInteger)row;
+-(NSUInteger)p_rowFromYear:(NSInteger)year;
 
 @end
 
 @implementation SRMonthPicker
 
-static const int SRMonthRowMultiplier = 340;
-static const int SRDefaultMinimumYear = 1;
-static const int SRDefaultMaximumYear = 99999;
+static const NSInteger SRMonthRowMultiplier = 340;
+static const NSInteger SRDefaultMinimumYear = 1;
+static const NSInteger SRDefaultMaximumYear = 99999;
 static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearCalendarUnit;
 
 -(id)initWithDate:(NSDate *)date
@@ -46,7 +47,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     
     if (self)
     {
-        [self prepare];
+        [self p_prepare];
         [self setDate:date];
         self.showsSelectionIndicator = YES;
     }
@@ -66,7 +67,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     
     if (self)
     {
-        [self prepare];
+        [self p_prepare];
         if (!_date)
             [self setDate:[NSDate date]];
     }
@@ -80,24 +81,12 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     
     if (self)
     {
-        [self prepare];
+        [self p_prepare];
         if (!_date)
             [self setDate:[NSDate date]];
     }
     
     return self;
-}
-
--(void)prepare
-{
-    self.dataSource = self;
-    self.delegate = self;
-    
-    _enableColourRow = YES;
-    _wrapMonths = YES;
-    
-    self.font = [UIFont boldSystemFontOfSize:24.0f];
-    self.fontColor = [UIColor blackColor];
 }
 
 -(id<UIPickerViewDelegate>)delegate
@@ -122,12 +111,12 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
         [super setDataSource:dataSource];
 }
 
--(int)monthComponent
+-(NSInteger)monthComponent
 {
     return self.yearComponent ^ 1;
 }
 
--(int)yearComponent
+-(NSInteger)yearComponent
 {
     return !self.yearFirst;
 }
@@ -180,26 +169,6 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     [self reloadAllComponents];
 }
 
--(int)yearFromRow:(NSUInteger)row
-{
-    int minYear = SRDefaultMinimumYear;
-    
-    if (self.minimumYear)
-        minYear = self.minimumYear.integerValue;
-    
-    return row + minYear;
-}
-
--(NSUInteger)rowFromYear:(int)year
-{
-    int minYear = SRDefaultMinimumYear;
-    
-    if (self.minimumYear)
-        minYear = self.minimumYear.integerValue;
-    
-    return year - minYear;
-}
-
 -(void)setDate:(NSDate *)date
 {
     NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:date];
@@ -210,15 +179,14 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     else if (self.maximumYear && components.year > self.maximumYear.integerValue)
         components.year = self.maximumYear.integerValue;
     
-    if(self.wrapMonths){
-        int monthMidpoint = self.monthStrings.count * (SRMonthRowMultiplier / 2);
+    if(self.wrapMonths) {
+        NSInteger monthMidpoint = self.monthStrings.count * (SRMonthRowMultiplier / 2);
         
         [self selectRow:(components.month - 1 + monthMidpoint) inComponent:self.monthComponent animated:NO];
-    }
-    else {
+    } else
         [self selectRow:(components.month - 1) inComponent:self.monthComponent animated:NO];
-    }
-    [self selectRow:[self rowFromYear:components.year] inComponent:self.yearComponent animated:NO];
+        
+    [self selectRow:[self p_rowFromYear:components.year] inComponent:self.yearComponent animated:NO];
     
     _date = [[NSCalendar currentCalendar] dateFromComponents:components];
 }
@@ -227,7 +195,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
 {
     NSDateComponents* components = [[NSDateComponents alloc] init];
     components.month = 1 + ([self selectedRowInComponent:self.monthComponent] % self.monthStrings.count);
-    components.year = [self yearFromRow:[self selectedRowInComponent:self.yearComponent]];
+    components.year = [self p_yearFromRow:[self selectedRowInComponent:self.yearComponent]];
     
     [self willChangeValueForKey:@"date"];
     if ([self.monthPickerDelegate respondsToSelector:@selector(monthPickerWillChangeDate:)])
@@ -252,11 +220,11 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     else if(component == self.monthComponent)
         return SRMonthRowMultiplier * self.monthStrings.count;
     
-    int maxYear = SRDefaultMaximumYear;
+    NSInteger maxYear = SRDefaultMaximumYear;
     if (self.maximumYear)
         maxYear = self.maximumYear.integerValue;
     
-    return [self rowFromYear:maxYear] + 1;
+    return [self p_rowFromYear:maxYear] + 1;
 }
 
 -(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
@@ -292,16 +260,15 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
         formatter.dateFormat = @"MMMM";
         label.textAlignment = component ? NSTextAlignmentLeft : NSTextAlignmentRight;
     } else {
-        label.text = [NSString stringWithFormat:@"%d", [self yearFromRow:row]];
+        label.text = [NSString stringWithFormat:@"%ld", (long)[self p_yearFromRow:row]];
         label.textAlignment = NSTextAlignmentCenter;
         formatter.dateFormat = @"y";
     }
     
-    
     label.font = self.font;
-    label.textColor = self.fontColor;
+    label.textColor = self.fontColour;
     
-    if (_enableColourRow && [[formatter stringFromDate:[NSDate date]] isEqualToString:label.text])
+    if (self.enableColourRow && [[formatter stringFromDate:[NSDate date]] isEqualToString:label.text])
         label.textColor = [UIColor colorWithRed:0.0f green:0.35f blue:0.91f alpha:1.0f];
     
     label.backgroundColor = [UIColor clearColor];
@@ -309,6 +276,40 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     label.shadowColor = [UIColor whiteColor];
     
     return label;
+}
+
+#pragma mark Private Methods
+
+-(NSInteger)p_yearFromRow:(NSUInteger)row
+{
+    NSInteger minYear = SRDefaultMinimumYear;
+    
+    if (self.minimumYear)
+        minYear = self.minimumYear.integerValue;
+    
+    return row + minYear;
+}
+
+-(NSUInteger)p_rowFromYear:(NSInteger)year
+{
+    NSInteger minYear = SRDefaultMinimumYear;
+    
+    if (self.minimumYear)
+        minYear = self.minimumYear.integerValue;
+    
+    return year - minYear;
+}
+
+-(void)p_prepare
+{
+    self.dataSource = self;
+    self.delegate = self;
+    
+    self.enableColourRow = YES;
+    self.wrapMonths = YES;
+    
+    self.font = [UIFont boldSystemFontOfSize:24.0f];
+    self.fontColor = [UIColor blackColor];
 }
 
 @end

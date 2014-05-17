@@ -87,16 +87,20 @@
 /// A Boolean value that determines whether the month wraps
 @property (nonatomic) BOOL wrapMonths;
 
-/**
-  A Boolean value that determines whether the current month & year are coloured.
-  */
+/// A Boolean value that determines whether the current month & year are coloured.
 @property (nonatomic) BOOL enableColourRow;
 
-/**
- Font and color to be used. Default - System Bold 24, Black.
- */
+/// en-US alias for `enableColourRow`.
+@property (nonatomic, getter = enableColourRow, setter = setEnableColourRow:) BOOL enableColorRow;
+
+/// Font to be used for all rows.  Default: System Bold, size 24.
 @property (nonatomic, strong) UIFont *font;
-@property (nonatomic, strong) UIColor *fontColor;
+
+/// Colour to be used for all "non coloured" rows.  Default: Black.
+@property (nonatomic, strong) UIColor *fontColour;
+
+/// en-US alias for `fontColour`.
+@property (nonatomic, strong, getter = fontColour, setter = setFontColour:) UIColor *fontColor;
 
 /**
   Designated initialiser.
