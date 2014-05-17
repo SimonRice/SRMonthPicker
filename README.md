@@ -4,7 +4,7 @@
 [![CocoaPods Platform](https://cocoapod-badges.herokuapp.com/p/SRMonthPicker/badge.png)](http://cocoadocs.org/docsets/SRMonthPicker) 
 [![CocoaPods Version](https://cocoapod-badges.herokuapp.com/v/SRMonthPicker/badge.png)](http://cocoadocs.org/docsets/SRMonthPicker) 
 
-Like UIDatePicker, but without the days.
+Like UIDatePicker, but without the days.  Tested on iOS 6 and above.  It should also work on iOS 5, but this hasn't been tested for a while.
 
 ![Screenshot](Doc/screenshot.png)
 
