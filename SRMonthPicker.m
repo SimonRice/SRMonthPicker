@@ -26,7 +26,9 @@
 
 @property (nonatomic) NSInteger monthComponent;
 @property (nonatomic) NSInteger yearComponent;
-@property (nonatomic, readonly) NSArray* monthStrings;
+@property (nonatomic, strong, readonly) NSArray* monthStrings;
+@property (nonatomic, strong, readonly) NSDateFormatter* monthFormatter;
+@property (nonatomic, strong, readonly) NSDateFormatter* yearFormatter;
 
 -(void)p_prepare;
 -(NSInteger)p_yearFromRow:(NSUInteger)row;
@@ -121,9 +123,29 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     return !self.yearFirst;
 }
 
+-(NSDateFormatter *)monthFormatter {
+    static NSDateFormatter *formatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"M";
+    });
+    return formatter;
+}
+
+-(NSDateFormatter *)yearFormatter {
+    static NSDateFormatter *formatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"M";
+    });
+    return formatter;
+}
+
 -(NSArray *)monthStrings
 {
-    return [[NSDateFormatter alloc] init].monthSymbols;
+    return self.monthFormatter.monthSymbols;
 }
 
 -(void)setYearFirst:(BOOL)yearFirst
@@ -253,16 +275,16 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     
     UILabel* label = [[UILabel alloc] initWithFrame:frame];
     
-    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter* formatter = nil;
     
     if (component == self.monthComponent) {
         label.text = [self.monthStrings objectAtIndex:(row % self.monthStrings.count)];
-        formatter.dateFormat = @"MMMM";
         label.textAlignment = component ? NSTextAlignmentLeft : NSTextAlignmentRight;
+        formatter = self.monthFormatter;
     } else {
         label.text = [NSString stringWithFormat:@"%ld", (long)[self p_yearFromRow:row]];
         label.textAlignment = NSTextAlignmentCenter;
-        formatter.dateFormat = @"y";
+        formatter = self.yearFormatter;
     }
     
     label.font = self.font;
