@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2012-2013 Simon Rice
+ Copyright (C) 2012-2015 Simon Rice
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -21,6 +21,10 @@
  */
 
 #import <UIKit/UIKit.h>
+
+#ifndef IBInspectable
+    #define IBInspectable
+#endif
 
 @class SRMonthPicker;
 
@@ -73,25 +77,25 @@
   
   The day component is ignored when written, and set to 1 when read.
   */
-@property (nonatomic, strong) NSDate* date;
+@property (nonatomic, strong) IBInspectable NSDate* date;
   
 /// The minimum year that a month picker can show.
-@property (nonatomic, strong) NSNumber* minimumYear;
+@property (nonatomic) IBInspectable NSInteger minimumYear;
 
 /// The maximum year that a month picker can show.
-@property (nonatomic, strong) NSNumber* maximumYear;
+@property (nonatomic) IBInspectable NSInteger maximumYear;
 
 /// A Boolean value that determines whether the year is shown first.
-@property (nonatomic) BOOL yearFirst;
+@property (nonatomic) IBInspectable BOOL yearFirst;
 
 /// A Boolean value that determines whether the month wraps
-@property (nonatomic) BOOL wrapMonths;
+@property (nonatomic) IBInspectable BOOL wrapMonths;
 
 /// A Boolean value that determines whether the current month & year are coloured.
 @property (nonatomic) BOOL enableColourRow;
 
 /// en-US alias for `enableColourRow`.
-@property (nonatomic, getter = enableColourRow, setter = setEnableColourRow:) BOOL enableColorRow;
+@property (nonatomic, getter = enableColourRow, setter = setEnableColourRow:) IBInspectable BOOL enableColorRow;
 
 /// Font to be used for all rows.  Default: System Bold, size 24.
 @property (nonatomic, strong) UIFont *font;
@@ -100,7 +104,7 @@
 @property (nonatomic, strong) UIColor *fontColour;
 
 /// en-US alias for `fontColour`.
-@property (nonatomic, strong, getter = fontColour, setter = setFontColour:) UIColor *fontColor;
+@property (nonatomic, strong, getter = fontColour, setter = setFontColour:) IBInspectable UIColor *fontColor;
 
 /**
   Designated initialiser.

@@ -51,8 +51,8 @@
     self.label.text = [NSString stringWithFormat:@"Selected: %@", [self formatDate:self.monthPicker.date]];
     
     // Some options to play around with
-    self.monthPicker.maximumYear = @2020;
-    self.monthPicker.minimumYear = @1900;
+    self.monthPicker.maximumYear = 2020;
+    self.monthPicker.minimumYear = 1900;
     self.monthPicker.yearFirst = YES;
 }
 

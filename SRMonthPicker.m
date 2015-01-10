@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2012-2013 Simon Rice
+ Copyright (C) 2012-2015 Simon Rice
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -69,6 +69,8 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     
     if (self)
     {
+        _minimumYear = SRDefaultMinimumYear;
+        _maximumYear = SRDefaultMaximumYear;
         [self p_prepare];
         if (!_date)
             [self setDate:[NSDate date]];
@@ -83,6 +85,9 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     
     if (self)
     {
+        _minimumYear = SRDefaultMinimumYear;
+        _maximumYear = SRDefaultMaximumYear;
+        
         [self p_prepare];
         if (!_date)
             [self setDate:[NSDate date]];
@@ -157,28 +162,28 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     [self setDate:date];
 }
 
--(void)setMinimumYear:(NSNumber *)minimumYear
+-(void)setMinimumYear:(NSInteger)minimumYear
 {
     NSDate* currentDate = self.date;
     NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:currentDate];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
-    if (minimumYear && components.year < minimumYear.integerValue)
-        components.year = minimumYear.integerValue;
+    if (minimumYear && components.year < minimumYear)
+        components.year = minimumYear;
     
     _minimumYear = minimumYear;
     [self reloadAllComponents];
     [self setDate:[[NSCalendar currentCalendar] dateFromComponents:components]];
 }
 
--(void)setMaximumYear:(NSNumber *)maximumYear
+-(void)setMaximumYear:(NSInteger)maximumYear
 {
     NSDate* currentDate = self.date;
     NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:currentDate];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
-    if (maximumYear && components.year > maximumYear.integerValue)
-        components.year = maximumYear.integerValue;
+    if (maximumYear && components.year > maximumYear)
+        components.year = maximumYear;
     
     _maximumYear = maximumYear;
     [self reloadAllComponents];
@@ -196,10 +201,10 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:date];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
-    if (self.minimumYear && components.year < self.minimumYear.integerValue)
-        components.year = self.minimumYear.integerValue;
-    else if (self.maximumYear && components.year > self.maximumYear.integerValue)
-        components.year = self.maximumYear.integerValue;
+    if (self.minimumYear && components.year < self.minimumYear)
+        components.year = self.minimumYear;
+    else if (self.maximumYear && components.year > self.maximumYear)
+        components.year = self.maximumYear;
     
     if(self.wrapMonths) {
         NSInteger monthMidpoint = self.monthStrings.count * (SRMonthRowMultiplier / 2);
@@ -244,7 +249,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     
     NSInteger maxYear = SRDefaultMaximumYear;
     if (self.maximumYear)
-        maxYear = self.maximumYear.integerValue;
+        maxYear = self.maximumYear;
     
     return [self p_rowFromYear:maxYear] + 1;
 }
@@ -307,7 +312,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     NSInteger minYear = SRDefaultMinimumYear;
     
     if (self.minimumYear)
-        minYear = self.minimumYear.integerValue;
+        minYear = self.minimumYear;
     
     return row + minYear;
 }
@@ -317,7 +322,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearC
     NSInteger minYear = SRDefaultMinimumYear;
     
     if (self.minimumYear)
-        minYear = self.minimumYear.integerValue;
+        minYear = self.minimumYear;
     
     return year - minYear;
 }
