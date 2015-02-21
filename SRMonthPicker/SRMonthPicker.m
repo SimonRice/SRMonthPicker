@@ -51,12 +51,13 @@ static const NSInteger SRDefaultMinimumYear = 1;
 static const NSInteger SRDefaultMaximumYear = 99999;
 static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalendarUnitYear;
 
--(id)initWithDate:(NSDate *)date
+- (id)initWithDate:(NSDate *)date calendar:(NSCalendar *)calendar
 {
     self = [super init];
     
     if (self)
     {
+        _calendar = calendar;
         [self p_prepare];
         [self setDate:date];
         self.showsSelectionIndicator = YES;
@@ -65,9 +66,15 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
     return self;
 }
 
+-(id)initWithDate:(NSDate *)date
+{
+    self = [self initWithDate:date calendar:[NSCalendar currentCalendar]];
+    return self;
+}
+
 -(id)init
 {
-    self = [self initWithDate:[NSDate date]];
+    self = [self initWithDate:[NSDate date] calendar:[NSCalendar currentCalendar]];
     return self;
 }
 
@@ -80,6 +87,8 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
         _minimumYear = SRDefaultMinimumYear;
         _maximumYear = SRDefaultMaximumYear;
         [self p_prepare];
+        if (!_calendar)
+            _calendar = [NSCalendar currentCalendar];
         if (!_date)
             [self setDate:[NSDate date]];
     }
@@ -97,6 +106,8 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
         _maximumYear = SRDefaultMaximumYear;
         
         [self p_prepare];
+        if (!_calendar)
+            _calendar = [NSCalendar currentCalendar];
         if (!_date)
             [self setDate:[NSDate date]];
     }
@@ -173,7 +184,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
 -(void)setMinimumYear:(NSInteger)minimumYear
 {
     NSDate* currentDate = self.date;
-    NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:currentDate];
+    NSDateComponents* components = [self.calendar components:SRDateComponentFlags fromDate:currentDate];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
     if (minimumYear && components.year < minimumYear)
@@ -181,13 +192,13 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
     
     _minimumYear = minimumYear;
     [self reloadAllComponents];
-    [self setDate:[[NSCalendar currentCalendar] dateFromComponents:components]];
+    [self setDate:[self.calendar dateFromComponents:components]];
 }
 
 -(void)setMaximumYear:(NSInteger)maximumYear
 {
     NSDate* currentDate = self.date;
-    NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:currentDate];
+    NSDateComponents* components = [self.calendar components:SRDateComponentFlags fromDate:currentDate];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
     if (maximumYear && components.year > maximumYear)
@@ -195,7 +206,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
     
     _maximumYear = maximumYear;
     [self reloadAllComponents];
-    [self setDate:[[NSCalendar currentCalendar] dateFromComponents:components]];
+    [self setDate:[self.calendar dateFromComponents:components]];
 }
 
 -(void)setWrapMonths:(BOOL)wrapMonths
@@ -206,7 +217,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
 
 -(void)setDate:(NSDate *)date
 {
-    NSDateComponents* components = [[NSCalendar currentCalendar] components:SRDateComponentFlags fromDate:date];
+    NSDateComponents* components = [self.calendar components:SRDateComponentFlags fromDate:date];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
     if (self.minimumYear && components.year < self.minimumYear)
@@ -223,7 +234,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
         
     [self selectRow:[self p_rowFromYear:components.year] inComponent:self.yearComponent animated:NO];
     
-    _date = [[NSCalendar currentCalendar] dateFromComponents:components];
+    _date = [self.calendar dateFromComponents:components];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -236,7 +247,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
     if ([self.monthPickerDelegate respondsToSelector:@selector(monthPickerWillChangeDate:)])
         [self.monthPickerDelegate monthPickerWillChangeDate:self];
     
-    _date = [[NSCalendar currentCalendar] dateFromComponents:components];
+    _date = [self.calendar dateFromComponents:components];
     
     if ([self.monthPickerDelegate respondsToSelector:@selector(monthPickerDidChangeDate:)])
         [self.monthPickerDelegate monthPickerDidChangeDate:self];

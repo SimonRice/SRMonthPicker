@@ -78,6 +78,9 @@
   The day component is ignored when written, and set to 1 when read.
   */
 @property (nonatomic, strong) IBInspectable NSDate* date;
+
+/// The calendar currently being used
+@property (nonatomic, strong, readonly) NSCalendar *calendar;
   
 /// The minimum year that a month picker can show.
 @property (nonatomic) IBInspectable NSInteger minimumYear;
@@ -109,17 +112,26 @@
 /**
   Designated initialiser.
 
-  Initializes and returns a newly allocated month picker with the current month 
-  & year.
+  Initializes and returns a newly allocated month picker with the current calendar, 
+  month & year.
 */
 -(id)init;
 
 /**
   Initializes and returns a newly allocated month picker with the specified 
-  date.
+  date and current calendar.
   @param date The date to be represented by the month picker -  the day 
   component will be ignored.
 */
 -(id)initWithDate:(NSDate *)date;
+
+/**
+ Initializes and returns a newly allocated month picker with the specified
+ date and current calendar.
+ @param date The date to be represented by the month picker -  the day
+ component will be ignored.
+ @param calendar The calendar to used by the date.
+ */
+-(id)initWithDate:(NSDate *)date calendar:(NSCalendar *)calendar;
 
 @end
