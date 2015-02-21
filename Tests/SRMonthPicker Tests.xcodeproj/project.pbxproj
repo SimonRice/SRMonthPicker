@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		580F0D56205E50A042EAD54E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7141A6971FC9FB72ACFD6D6B /* libPods.a */; };
+		F4CB17051A985AB100D22CAB /* SRMonthPickerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CB17041A985AB100D22CAB /* SRMonthPickerSpec.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5CF559033B722A05815499E8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7141A6971FC9FB72ACFD6D6B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0C11927A4A489F08C0EC10 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F4CB16F61A9859FA00D22CAB /* SRMonthPicker Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SRMonthPicker Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CB17001A985A9000D22CAB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		F4CB17021A985AB100D22CAB /* SRMonthPicker Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SRMonthPicker Tests-Prefix.pch"; path = "Tests/SRMonthPicker Tests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		F4CB17031A985AB100D22CAB /* SRMonthPickerSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRMonthPickerSpec.h; path = Tests/SRMonthPickerSpec.h; sourceTree = SOURCE_ROOT; };
+		F4CB17041A985AB100D22CAB /* SRMonthPickerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRMonthPickerSpec.m; path = Tests/SRMonthPickerSpec.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4CB16F31A9859FA00D22CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				580F0D56205E50A042EAD54E /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87F8FB8B7EB9CEA8D0DF58DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7141A6971FC9FB72ACFD6D6B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC795891C74DECC305A1D8A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD0C11927A4A489F08C0EC10 /* Pods.debug.xcconfig */,
+				5CF559033B722A05815499E8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F4CB16EB1A9859CF00D22CAB = {
+			isa = PBXGroup;
+			children = (
+				F4CB16F91A9859FA00D22CAB /* Supporting Files */,
+				F4CB16F81A9859FA00D22CAB /* Tests */,
+				F4CB16F71A9859FA00D22CAB /* Products */,
+				EC795891C74DECC305A1D8A2 /* Pods */,
+				87F8FB8B7EB9CEA8D0DF58DB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F4CB16F71A9859FA00D22CAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4CB16F61A9859FA00D22CAB /* SRMonthPicker Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4CB16F81A9859FA00D22CAB /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F4CB17031A985AB100D22CAB /* SRMonthPickerSpec.h */,
+				F4CB17041A985AB100D22CAB /* SRMonthPickerSpec.m */,
+			);
+			name = Tests;
+			path = "SRMonthPicker Tests";
+			sourceTree = "<group>";
+		};
+		F4CB16F91A9859FA00D22CAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4CB17021A985AB100D22CAB /* SRMonthPicker Tests-Prefix.pch */,
+				F4CB17001A985A9000D22CAB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = "SRMonthPicker Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4CB16F51A9859FA00D22CAB /* SRMonthPicker Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4CB16FD1A9859FA00D22CAB /* Build configuration list for PBXNativeTarget "SRMonthPicker Tests" */;
+			buildPhases = (
+				16A0FB9F326EB92EAB82FDD2 /* Check Pods Manifest.lock */,
+				F4CB16F21A9859FA00D22CAB /* Sources */,
+				F4CB16F31A9859FA00D22CAB /* Frameworks */,
+				F4CB16F41A9859FA00D22CAB /* Resources */,
+				DA0A5F71AB9FAADE476855AC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SRMonthPicker Tests";
+			productName = "SRMonthPicker Tests";
+			productReference = F4CB16F61A9859FA00D22CAB /* SRMonthPicker Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4CB16EC1A9859CF00D22CAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					F4CB16F51A9859FA00D22CAB = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = F4CB16EF1A9859CF00D22CAB /* Build configuration list for PBXProject "SRMonthPicker Tests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F4CB16EB1A9859CF00D22CAB;
+			productRefGroup = F4CB16F71A9859FA00D22CAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4CB16F51A9859FA00D22CAB /* SRMonthPicker Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4CB16F41A9859FA00D22CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16A0FB9F326EB92EAB82FDD2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA0A5F71AB9FAADE476855AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4CB16F21A9859FA00D22CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CB17051A985AB100D22CAB /* SRMonthPickerSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F4CB16F01A9859CF00D22CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		F4CB16F11A9859CF00D22CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		F4CB16FE1A9859FA00D22CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD0C11927A4A489F08C0EC10 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F4CB16FF1A9859FA00D22CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CF559033B722A05815499E8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4CB16EF1A9859CF00D22CAB /* Build configuration list for PBXProject "SRMonthPicker Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CB16F01A9859CF00D22CAB /* Debug */,
+				F4CB16F11A9859CF00D22CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4CB16FD1A9859FA00D22CAB /* Build configuration list for PBXNativeTarget "SRMonthPicker Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CB16FE1A9859FA00D22CAB /* Debug */,
+				F4CB16FF1A9859FA00D22CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4CB16EC1A9859CF00D22CAB /* Project object */;
+}

@@ -30,8 +30,8 @@ describe(@"SRMonthPicker", ^{
     it(@"should initialise to the current month via the designated initialiser", ^{
         SRMonthPicker *monthPicker = [[SRMonthPicker alloc] init];
         NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *monthPickerComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSTimeZoneCalendarUnit) fromDate:monthPicker.date];
-        NSDateComponents *todayComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:[NSDate date]];
+        NSDateComponents *monthPickerComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitTimeZone) fromDate:monthPicker.date];
+        NSDateComponents *todayComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:[NSDate date]];
         
         if (todayComponents.day != 1) {
             [[theValue(monthPickerComponents.day) shouldNot] equal:theValue(todayComponents.day)];
@@ -50,8 +50,8 @@ describe(@"SRMonthPicker", ^{
         NSDate *date = [NSDate dateWithTimeIntervalSince1970:1368426075];
         SRMonthPicker *monthPicker = [[SRMonthPicker alloc] initWithDate:date];
         NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *monthPickerComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSTimeZoneCalendarUnit) fromDate:monthPicker.date];
-        NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:date];
+        NSDateComponents *monthPickerComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitTimeZone) fromDate:monthPicker.date];
+        NSDateComponents *dateComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:date];
         
         [[theValue(monthPickerComponents.day) should] equal:theValue(1)];
         [[theValue(monthPickerComponents.hour) should] equal:theValue(0)];
@@ -69,8 +69,8 @@ describe(@"SRMonthPicker", ^{
         monthPicker.date = date;
         
         NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *monthPickerComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSTimeZoneCalendarUnit) fromDate:monthPicker.date];
-        NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:date];
+        NSDateComponents *monthPickerComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitTimeZone) fromDate:monthPicker.date];
+        NSDateComponents *dateComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:date];
         
         [[theValue(monthPickerComponents.day) shouldNot] equal:theValue(dateComponents.day)];
         [[theValue(monthPickerComponents.day) should] equal:theValue(1)];
@@ -87,54 +87,54 @@ describe(@"SRMonthPicker", ^{
         // May 2013
         NSDate *date = [NSDate dateWithTimeIntervalSince1970:1368426075];
         SRMonthPicker *monthPicker = [[SRMonthPicker alloc] init];
-        [monthPicker.maximumYear shouldBeNil];
+        [[theValue(monthPicker.maximumYear) should] equal:theValue(99999)];
         
-        monthPicker.maximumYear = @2012;
-        [[theValue(monthPicker.maximumYear.intValue) should] equal:theValue(2012)];
+        monthPicker.maximumYear = 2012;
+        [[theValue(monthPicker.maximumYear) should] equal:theValue(2012)];
         monthPicker.date = date;
         
         NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *monthPickerComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSTimeZoneCalendarUnit) fromDate:monthPicker.date];
-        NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit) fromDate:date];
+        NSDateComponents *monthPickerComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitTimeZone) fromDate:monthPicker.date];
+        NSDateComponents *dateComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth) fromDate:date];
         
         [[theValue(monthPickerComponents.day) should] equal:theValue(1)];
         [[theValue(monthPickerComponents.year) shouldNot] equal:theValue(dateComponents.year)];
         [[theValue(monthPickerComponents.month) should] equal:theValue(dateComponents.month)];
-        [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.maximumYear.intValue)];
+        [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.maximumYear)];
         [[monthPickerComponents.timeZone should] equal:[NSTimeZone defaultTimeZone]];
         
         // Set new maximum year, refresh the date components
-        monthPicker.maximumYear = @2011;
+        monthPicker.maximumYear = 2011;
         [[theValue(monthPickerComponents.month) should] equal:theValue(dateComponents.month)];
-        monthPickerComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit) fromDate:monthPicker.date];
-        [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.maximumYear.intValue)];
+        monthPickerComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth) fromDate:monthPicker.date];
+        [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.maximumYear)];
     });
     
     it(@"should not have a year less than the minimum year", ^{
         // May 2013
         NSDate *date = [NSDate dateWithTimeIntervalSince1970:1368426075];
         SRMonthPicker *monthPicker = [[SRMonthPicker alloc] init];
-        [monthPicker.minimumYear shouldBeNil];
+        [[theValue(monthPicker.minimumYear) should] equal:theValue(1)];
         
-        monthPicker.minimumYear = @2014;
-        [[theValue(monthPicker.minimumYear.intValue) should] equal:theValue(2014)];
+        monthPicker.minimumYear = 2014;
+        [[theValue(monthPicker.minimumYear) should] equal:theValue(2014)];
         monthPicker.date = date;
         
         NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *monthPickerComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSTimeZoneCalendarUnit) fromDate:monthPicker.date];
-        NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit) fromDate:date];
+        NSDateComponents *monthPickerComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitTimeZone) fromDate:monthPicker.date];
+        NSDateComponents *dateComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth) fromDate:date];
         
         [[theValue(monthPickerComponents.day) should] equal:theValue(1)];
         [[theValue(monthPickerComponents.year) shouldNot] equal:theValue(dateComponents.year)];
         [[theValue(monthPickerComponents.month) should] equal:theValue(dateComponents.month)];
-        [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.minimumYear.intValue)];
+        [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.minimumYear)];
         [[monthPickerComponents.timeZone should] equal:[NSTimeZone defaultTimeZone]];
         
         // Set new minimum year, refresh the date components
-        monthPicker.minimumYear = @2015;
-        monthPickerComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit) fromDate:monthPicker.date];
+        monthPicker.minimumYear = 2015;
+        monthPickerComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth) fromDate:monthPicker.date];
         [[theValue(monthPickerComponents.month) should] equal:theValue(dateComponents.month)];
-        [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.minimumYear.intValue)];
+        [[theValue(monthPickerComponents.year) should] equal:theValue(monthPicker.minimumYear)];
     });
     
     it(@"should not have an external UIPickerViewDelegate", ^{

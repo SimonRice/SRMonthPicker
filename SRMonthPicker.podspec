@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
   s.author       = { "Simon Rice" => "im@simonrice.com" }
   s.source       = { :git => "https://github.com/simonrice/SRMonthPicker.git", :tag => "0.2.9" }
   s.platform     = :ios, "5.0"
-  s.source_files = "Classes", "SRMonthPicker.{h,m}"
+  s.source_files = "SRMonthPicker", "SRMonthPicker.{h,m}"
   s.requires_arc = true
 end

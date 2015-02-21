@@ -26,9 +26,9 @@ pod "SRMonthPicker"
 
 Then run `pod install` to install the dependencies.
 
-Alternatively, simply clone this project as a submodule or download the classes, and include them in your project.  Bear in mind this library uses ARC, so you should create a Static Library if your project doesn't.
+Alternatively, simply clone this project as a submodule or download the classes in the `SRMonthPicker` directory, and include them in your project.  Bear in mind this library uses ARC, so you should create a Static Library if your project doesn't.
 
-If you're using QuickDialog, you may be interested in [QMonthElement](https://github.com/simonrice/QMonthElement), which integrates one of these month pickers into your QuickDialog forms.
+If you're using QuickDialog, you may be interested in [QMonthElement](https://github.com/simonrice/QMonthElement), which integrates one of these month pickers into your QuickDialog forms.  I'm working on integrations for XLForm and FXForms as well.
 
 ## Usage
 

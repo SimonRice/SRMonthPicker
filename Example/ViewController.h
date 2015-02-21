@@ -20,13 +20,9 @@
  THE SOFTWARE.
  */
 
+#import "SRMonthPicker.h"
 #import <UIKit/UIKit.h>
 
-#import "AppDelegate.h"
+@interface ViewController : UIViewController<SRMonthPickerDelegate>
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-}
+@end
