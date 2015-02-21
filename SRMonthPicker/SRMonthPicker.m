@@ -187,7 +187,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
     NSDateComponents* components = [self.calendar components:SRDateComponentFlags fromDate:currentDate];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
-    if (minimumYear && components.year < minimumYear)
+    if (components.year < minimumYear)
         components.year = minimumYear;
     
     _minimumYear = minimumYear;
@@ -201,7 +201,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
     NSDateComponents* components = [self.calendar components:SRDateComponentFlags fromDate:currentDate];
     components.timeZone = [NSTimeZone defaultTimeZone];
     
-    if (maximumYear && components.year > maximumYear)
+    if (components.year > maximumYear)
         components.year = maximumYear;
     
     _maximumYear = maximumYear;
