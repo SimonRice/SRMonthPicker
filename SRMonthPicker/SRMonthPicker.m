@@ -22,6 +22,14 @@
 
 #import "SRMonthPicker.h"
 
+#ifdef NSCalendarUnitMonth
+#define NSCalendarUnitMonth NSMonthCalendarUnit
+#endif
+
+#ifdef NSCalendarUnitYear
+#define NSCalendarUnitYear NSYearCalendarUnit
+#endif
+
 @interface SRMonthPicker()
 
 @property (nonatomic) NSInteger monthComponent;
@@ -41,7 +49,7 @@
 static const NSInteger SRMonthRowMultiplier = 340;
 static const NSInteger SRDefaultMinimumYear = 1;
 static const NSInteger SRDefaultMaximumYear = 99999;
-static const NSCalendarUnit SRDateComponentFlags = NSMonthCalendarUnit | NSYearCalendarUnit;
+static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalendarUnitYear;
 
 -(id)initWithDate:(NSDate *)date
 {
