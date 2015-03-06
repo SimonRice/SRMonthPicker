@@ -16,6 +16,7 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+!SRMonthPicker.xcodeproj/xcshareddata/xcschemes/*
 Tests/Pods
 Tests/Podfile.lock
 Tests/SRMonthPicker Tests.xcodeproj/xcshareddata/xcschemes/
