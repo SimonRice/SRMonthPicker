@@ -152,6 +152,7 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         formatter = [[NSDateFormatter alloc] init];
+        formatter.calendar = self.calendar;
         formatter.dateFormat = @"M";
     });
     return formatter;
@@ -162,7 +163,8 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         formatter = [[NSDateFormatter alloc] init];
-        formatter.dateFormat = @"M";
+        formatter.calendar = self.calendar;
+        formatter.dateFormat = @"y";
     });
     return formatter;
 }
@@ -306,9 +308,10 @@ static const NSCalendarUnit SRDateComponentFlags = NSCalendarUnitMonth | NSCalen
         label.textAlignment = component ? NSTextAlignmentLeft : NSTextAlignmentRight;
         formatter = self.monthFormatter;
     } else {
+        formatter = self.yearFormatter;
+        
         label.text = [NSString stringWithFormat:@"%ld", (long)[self p_yearFromRow:row]];
         label.textAlignment = NSTextAlignmentCenter;
-        formatter = self.yearFormatter;
     }
     
     label.font = self.font;

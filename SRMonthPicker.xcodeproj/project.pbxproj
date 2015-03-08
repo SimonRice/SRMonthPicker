@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4AC8BD31AA95A72006841F6 /* SRMonthPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F4AC8BD11AA95A72006841F6 /* SRMonthPicker.h */; };
+		F4AC8BD31AA95A72006841F6 /* SRMonthPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F4AC8BD11AA95A72006841F6 /* SRMonthPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4AC8BD41AA95A72006841F6 /* SRMonthPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AC8BD21AA95A72006841F6 /* SRMonthPicker.m */; };
 		F4AC8BD61AA95AC6006841F6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AC8BD51AA95AC6006841F6 /* Info.plist */; };
 /* End PBXBuildFile section */
