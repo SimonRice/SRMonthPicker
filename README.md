@@ -4,7 +4,7 @@
 [![CocoaPods Platform](https://cocoapod-badges.herokuapp.com/p/SRMonthPicker/badge.png)](http://cocoadocs.org/docsets/SRMonthPicker) 
 [![CocoaPods Version](https://cocoapod-badges.herokuapp.com/v/SRMonthPicker/badge.png)](http://cocoadocs.org/docsets/SRMonthPicker) 
 
-Like UIDatePicker, but without the days.  Tested on iOS 6 and above.  It should also work on iOS 5, but this hasn't been tested for a while.
+Like UIDatePicker, but without the days.  Tested on iOS 7 and above.  It should also work on iOS 5-6, but this hasn't been tested for a while.
 
 ![Screenshot](Doc/screenshot.png)
 
@@ -49,7 +49,7 @@ As of version 0.2.5, there is a `SRMonthPickerDelegate`.  This provides 2 option
 
 Because the `delegate` property is used internally, you'll need to assign your delegate to the month picker's `monthPickerDelegate` property.
 
-A simple example project showing off many of the features can be seen in the `Example+Tests` folder, which also contains a few unit tests.  In addition, the header files are fully documented in AppleDoc format - thanks to CocoaDocs, you can see the full documentation [in your browser](http://cocoadocs.org/docsets/SRMonthPicker).
+A simple example project showing off many of the features can be seen in the `Example` folder.  In addition, the header files are fully documented in AppleDoc format - thanks to CocoaDocs, you can see the full documentation [in your browser](http://cocoadocs.org/docsets/SRMonthPicker).
 
 ## Contributions
 
