@@ -26,13 +26,19 @@ pod "SRMonthPicker"
 
 Then run `pod install` to install the dependencies.
 
-Alternatively, simply clone this project as a submodule or download the classes in the `SRMonthPicker` directory, and include them in your project.  Bear in mind this library uses ARC, so you should create a Static Library if your project doesn't.
+Alternatively, if you're targeting iOS8 or above, the head version of SRMonthPicker is compatible with [Carthage](https://github.com/Carthage/Carthage) - simply add this to your `Cartfile`:
 
-If you're using QuickDialog, you may be interested in [QMonthElement](https://github.com/simonrice/QMonthElement), which integrates one of these month pickers into your QuickDialog forms.  I'm working on integrations for XLForm and FXForms as well.
+```
+github "SimonRice/SRMonthPicker" "master"
+```
+
+If you're not using a dependency manager, simply clone this project as a submodule or download the classes in the `SRMonthPicker` directory, and include them in your project.  Bear in mind this library uses ARC, so you should create a Static Library if your project doesn't.
+
+If you're using QuickDialog, you may be interested in [QMonthElement](https://github.com/simonrice/QMonthElement), which integrates one of these month pickers into your QuickDialog forms.  Integrations for XLForm and FXForms are in the works as well.
 
 ## Usage
 
-For Interface Builder (including Storyboard), simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Editor, set the class of the picker to `SRMonthPicker`.  If you're building your interfaces by code, it's simply a case of initialising an SRMonthPicker instance & adding a subview.
+For Interface Builder (including Storyboard), simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Editor, set the class of the picker to `SRMonthPicker`.  If you're building your interfaces by code, it's simply a case of initialising an SRMonthPicker instance & adding a subview.  In XCode 6 and above, you will also have the option of modifying some of the month picker's properties straight from the attributes inspector on Interface Builder.
 
 You have properties to show the year first, along with the setting (& getting) the selected date, plus the maximum & minimum years.
 
@@ -41,7 +47,7 @@ As of version 0.2.5, there is a `SRMonthPickerDelegate`.  This provides 2 option
 * `- (void)monthPickerWillChangeDate:(SRMonthPicker *)monthPicker`
 * `- (void)monthPickerDidChangeDate:(SRMonthPicker *)monthPicker`
 
-Because the `delegate` property is used interally, you'll need to assign your delegate to the month picker's `monthPickerDelegate` property.
+Because the `delegate` property is used internally, you'll need to assign your delegate to the month picker's `monthPickerDelegate` property.
 
 A simple example project showing off many of the features can be seen in the `Example+Tests` folder, which also contains a few unit tests.  In addition, the header files are fully documented in AppleDoc format - thanks to CocoaDocs, you can see the full documentation [in your browser](http://cocoadocs.org/docsets/SRMonthPicker).
 
