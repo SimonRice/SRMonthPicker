@@ -1,8 +1,11 @@
 # SRMonthPicker
 
-[![Build Status](https://travis-ci.org/simonrice/SRMonthPicker.png)](https://travis-ci.org/simonrice/SRMonthPicker) 
-[![CocoaPods Platform](https://cocoapod-badges.herokuapp.com/p/SRMonthPicker/badge.png)](http://cocoadocs.org/docsets/SRMonthPicker) 
-[![CocoaPods Version](https://cocoapod-badges.herokuapp.com/v/SRMonthPicker/badge.png)](http://cocoadocs.org/docsets/SRMonthPicker) 
+[![Build Status](https://img.shields.io/travis/simonrice/SRMonthPicker.svg)](https://travis-ci.org/simonrice/SRMonthPicker) 
+[![CocoaPods Platform](https://img.shields.io/cocoapods/p/SRMonthPicker.svg)](http://cocoadocs.org/docsets/SRMonthPicker) 
+[![CocoaPods Version](https://img.shields.io/cocoapods/v/SRMonthPicker.svg)](http://cocoadocs.org/docsets/SRMonthPicker) 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible%2A-4BC51D.svg)](https://github.com/Carthage/Carthage)
+
+\* Carthage compatibility is only included on the HEAD version and will feature in the next release.
 
 Like UIDatePicker, but without the days.  Tested on iOS 7 and above.  It should also work on iOS 5-6, but this hasn't been tested for a while.
 
