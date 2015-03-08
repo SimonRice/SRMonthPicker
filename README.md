@@ -7,14 +7,14 @@
 
 \* Carthage compatibility is only included on the HEAD version and will feature in the next release.
 
-Like UIDatePicker, but without the days.  Tested on iOS 7 and above.  It should also work on iOS 5-6, but this hasn't been tested for a while.
+SRMonthPicker is like UIDatePicker, but without the days.  As the name says, it's a fully localised month picker that allows the user to choose a month and a year.  Perfect for entering credit card expiry dates or just when you don't need a day component.  It's meant to mimic the look, feel & behaviour of 2 native UI elements on iOS:
+
+* A month picker that appears for an `<input type="month" />` element on iOS Safari, sadly not exposed via any native control or a setting on UIDatePicker.
+* A UIDatePicker set to Date-only mode, but without the day element.
 
 ![Screenshot](Doc/screenshot.png)
 
-This is a native, localised month picker for iOS, licensed under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).  It's meant to mimic the look, feel & behaviour of 2 UI elements on iOS:
-
-* A monthpicker that appears for an `<input type="month" />` element on iOS Safari
-* A UIDatePicker set to Date-only mode, but without the day element.
+SRMonthPicker has been tested on iOS 7 and above.  It should also work on iOS 5-6, but this hasn't been tested for a while.  It is licensed under the terms of the [MIT License](http://opensource.org/licenses/mit-license.php).
 
 ## Including in your project
 
