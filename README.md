@@ -3,9 +3,9 @@
 [![Build Status](https://img.shields.io/travis/simonrice/SRMonthPicker.svg)](https://travis-ci.org/simonrice/SRMonthPicker) 
 [![CocoaPods Platform](https://img.shields.io/cocoapods/p/SRMonthPicker.svg)](http://cocoadocs.org/docsets/SRMonthPicker) 
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/SRMonthPicker.svg)](http://cocoadocs.org/docsets/SRMonthPicker) 
--[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible%2A-4BC51D.svg)](https://github.com/Carthage/Carthage)		
--		
--\* Carthage compatibility is only included on the HEAD version and will feature in the next release.
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible%2A-4BC51D.svg)](https://github.com/Carthage/Carthage)	
+
+\* Carthage compatibility is only included on the HEAD version and will feature in the next release.
 
 SRMonthPicker is like UIDatePicker, but without the days.  As the name says, it's a fully localised month picker that allows the user to choose a month and a year.  Perfect for entering credit card expiry dates or just when you don't need a day component.  It's meant to mimic the look, feel & behaviour of 2 native UI elements on iOS:
 
