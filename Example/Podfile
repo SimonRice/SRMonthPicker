@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'SRMonthPicker_Example', :exclusive => true do
+  pod "SRMonthPicker", :path => "../"
+end
+
+target 'SRMonthPicker_Tests', :exclusive => true do
+  pod "SRMonthPicker", :path => "../"
+
+  pod 'Kiwi'
+end

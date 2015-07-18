@@ -1,0 +1,17 @@
+PODS:
+  - Kiwi (2.3.1)
+  - SRMonthPicker (0.2.10)
+
+DEPENDENCIES:
+  - Kiwi
+  - SRMonthPicker (from `../`)
+
+EXTERNAL SOURCES:
+  SRMonthPicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
+  SRMonthPicker: d3c639e82f525f1c10d1ad7f4bbdf180d404942b
+
+COCOAPODS: 0.37.2

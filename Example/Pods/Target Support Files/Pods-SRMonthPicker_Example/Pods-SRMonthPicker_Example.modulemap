@@ -1,0 +1,6 @@
+framework module Pods_SRMonthPicker_Example {
+  umbrella header "Pods-SRMonthPicker_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
