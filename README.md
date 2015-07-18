@@ -3,9 +3,7 @@
 [![Build Status](https://img.shields.io/travis/simonrice/SRMonthPicker.svg)](https://travis-ci.org/simonrice/SRMonthPicker) 
 [![CocoaPods Platform](https://img.shields.io/cocoapods/p/SRMonthPicker.svg)](http://cocoadocs.org/docsets/SRMonthPicker) 
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/SRMonthPicker.svg)](http://cocoadocs.org/docsets/SRMonthPicker) 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible%2A-4BC51D.svg)](https://github.com/Carthage/Carthage)	
-
-\* Carthage compatibility is only included on the HEAD version and will feature in the next release.
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)	
 
 SRMonthPicker is like UIDatePicker, but without the days.  As the name says, it's a fully localised month picker that allows the user to choose a month and a year.  Perfect for entering credit card expiry dates or just when you don't need a day component.  It's meant to mimic the look, feel & behaviour of 2 native UI elements on iOS:
 
@@ -29,15 +27,15 @@ pod "SRMonthPicker"
 
 Then run `pod install` to install the dependencies.
 
-Alternatively, if you're targeting iOS8 or above, the head version of SRMonthPicker is compatible with [Carthage](https://github.com/Carthage/Carthage) - simply add this to your `Cartfile`:
+Alternatively, if you're targeting iOS8 or above, SRMonthPicker is also compatible with [Carthage](https://github.com/Carthage/Carthage) - simply add this to your `Cartfile`:
 
 ```
-github "SimonRice/SRMonthPicker" "master"
+github "SimonRice/SRMonthPicker"
 ```
 
 If you're not using a dependency manager, simply clone this project as a submodule or download the classes in the `SRMonthPicker` directory, and include them in your project.  Bear in mind this library uses ARC, so you should create a Static Library if your project doesn't.
 
-If you're using QuickDialog, you may be interested in [QMonthElement](https://github.com/simonrice/QMonthElement), which integrates one of these month pickers into your QuickDialog forms.  Integrations for XLForm and FXForms are in the works as well.
+If you're using QuickDialog, you may be interested in [QMonthElement](https://github.com/simonrice/QMonthElement), which integrates one of these month pickers into your QuickDialog forms.  Integrations for other form frameworks, such as XLForm and FXForms, are in the works as well.
 
 ## Usage
 
