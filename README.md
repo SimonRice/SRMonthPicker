@@ -39,7 +39,7 @@ If you're using QuickDialog, you may be interested in [QMonthElement](https://gi
 
 ## Usage
 
-For Interface Builder (including Storyboard), simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Editor, set the class of the picker to `SRMonthPicker`.  If you're building your interfaces by code, it's simply a case of initialising an SRMonthPicker instance & adding a subview.  In XCode 6 and above, you will also have the option of modifying some of the month picker's properties straight from the attributes inspector on Interface Builder.
+For Interface Builder (including Storyboard), simply drag out a `UIPickerView` in Interface Builder.  Under the Assistant Editor, set the class of the picker to `SRMonthPicker`.  If you're building your interfaces by code, it's simply a case of initialising an SRMonthPicker instance & adding a subview.  In Xcode 6 and above, you will also have the option of modifying some of the month picker's properties straight from the attributes inspector on Interface Builder.
 
 You have properties to show the year first, along with the setting (& getting) the selected date, plus the maximum & minimum years.
 
