@@ -23,7 +23,7 @@
 #import <UIKit/UIKit.h>
 
 #ifndef IBInspectable
-	#define IBInspectable
+    #define IBInspectable
 #endif
 
 @class SRMonthPicker;
