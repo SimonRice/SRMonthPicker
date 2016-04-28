@@ -1,16 +1,16 @@
 /*
  Copyright (C) 2012-2015 Simon Rice
- 
+
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
- 
+
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
- 
+
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -29,59 +29,62 @@
 @class SRMonthPicker;
 
 /**
-  Defines a set of optional methods you can use to receive change-related 
-  messages for SRMonthPicker objects.  All of the methods in this protocol are 
-  optional.  Typically, the delegate implements other optional methods to 
-  respond to new selections. 
+ Defines a set of optional methods you can use to receive change-related
+ messages for SRMonthPicker objects.  All of the methods in this protocol are
+ optional.  Typically, the delegate implements other optional methods to
+ respond to new selections.
  */
 @protocol SRMonthPickerDelegate <NSObject>
 
 @optional
 
 /**
-  Tells the delegate that a specified date is about to be selected.
-  @param monthPicker A month picker object informing the delegate about the 
-  impending selection.
-*/
+ Tells the delegate that a specified date is about to be selected.
+ @param monthPicker A month picker object informing the delegate about the
+ impending selection.
+ */
 - (void)monthPickerWillChangeDate:(SRMonthPicker *)monthPicker;
 /**
-  Tells the delegate that a specified date has been selected.
-  @param monthPicker A month picker object informing the delegate about the 
-  committed selection.
-*/
+ Tells the delegate that a specified date has been selected.
+ @param monthPicker A month picker object informing the delegate about the
+ committed selection.
+ */
 - (void)monthPickerDidChangeDate:(SRMonthPicker *)monthPicker;
 
 @end
 
 /**
-  The SRMonthPicker class implements an object that uses multiple rotating 
-  wheels to allow users to select a month and year.  This is similar to both 
-  iOS's UIDatePicker set to Date-only mode without the day element and Mobile
-  Safari's picker view that appears for an `<input type="month" />` tag.
+ The SRMonthPicker class implements an object that uses multiple rotating
+ wheels to allow users to select a month and year.  This is similar to both
+ iOS's UIDatePicker set to Date-only mode without the day element and Mobile
+ Safari's picker view that appears for an `<input type="month" />` tag.
 
-  Unlike UIDatePicker, SRMonthPicker does inherit from UIPickerView.  It does 
-  use both UIPickerViewDataSource and UIPickerViewDelegate, but presents a 
-  monthPickerDelegate property.
-*/
+ Unlike UIDatePicker, SRMonthPicker does inherit from UIPickerView.  It does
+ use both UIPickerViewDataSource and UIPickerViewDelegate, but presents a
+ monthPickerDelegate property.
+ */
 @interface SRMonthPicker : UIPickerView<UIPickerViewDataSource, UIPickerViewDelegate>
 
 /**
-  The designated delegate for the month picker.
-  @warning **Important:** The delegate property is already used internally for 
-  UIPickerView's delegate - **please don't read from or assign to it**!
-  */
+ The designated delegate for the month picker.
+ @warning **Important:** The delegate property is already used internally for
+ UIPickerView's delegate - **please don't read from or assign to it**!
+ */
 @property (nonatomic, weak) id<SRMonthPickerDelegate> monthPickerDelegate;
 
 /**
-  The date represented by the month picker.
-  
-  The day component is ignored when written, and set to 1 when read.
-  */
-@property (nonatomic, strong) IBInspectable NSDate* date;
+ The date represented by the month picker.
+
+ The day component is ignored when written, and set to 1 when read.
+ */
+@property (nonatomic, strong) IBInspectable NSDate *date;
 
 /// The calendar currently being used
 @property (nonatomic, strong, readonly) NSCalendar *calendar;
-  
+
+/// The locale currently being used
+@property (nonatomic, strong, readonly) NSLocale *locale;
+
 /// The minimum year that a month picker can show.
 @property (nonatomic) IBInspectable NSInteger minimumYear;
 
@@ -109,20 +112,23 @@
 /// en-US alias for `fontColour`.
 @property (nonatomic, strong, getter = fontColour, setter = setFontColour:) IBInspectable UIColor *fontColor;
 
-/**
-  Designated initialiser.
+/// Use only years
+@property (nonatomic) IBInspectable BOOL onlyYear;
 
-  Initializes and returns a newly allocated month picker with the current calendar, 
-  month & year.
-*/
+/**
+ Designated initialiser.
+
+ Initializes and returns a newly allocated month picker with the current calendar,
+ month & year.
+ */
 -(id)init;
 
 /**
-  Initializes and returns a newly allocated month picker with the specified 
-  date and current calendar.
-  @param date The date to be represented by the month picker -  the day 
-  component will be ignored.
-*/
+ Initializes and returns a newly allocated month picker with the specified
+ date and current calendar.
+ @param date The date to be represented by the month picker -  the day
+ component will be ignored.
+ */
 -(id)initWithDate:(NSDate *)date;
 
 /**
@@ -132,6 +138,6 @@
  component will be ignored.
  @param calendar The calendar to used by the date.
  */
--(id)initWithDate:(NSDate *)date calendar:(NSCalendar *)calendar;
+-(id)initWithDate:(NSDate *)date calendar:(NSCalendar *)calendar locale:(NSLocale *)locale;
 
 @end
